@@ -2,7 +2,7 @@
   "name": "pic18-assembly-language",
   "displayName": "PIC18 Assembly Language",
   "description": "Language support for PIC18 assembly",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.105.0"
   },
@@ -18,6 +18,14 @@
   },
   "main": "./out/extension.js",
   "activationEvents": [],
+  "files": [
+    "out/**",
+    "syntaxes/**",
+    "language-configuration.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "README.vs.md",
   "scripts": {
     "vscode:prepublish": "npm run bundle",
     "compile": "tsc -p .",
@@ -29,8 +37,7 @@
     "@types/vscode": "1.105.0",
     "esbuild": "0.25.11",
     "esbuild-plugin-alias": "0.2.1",
-    "typescript": "^5.9.3",
-    "vsce": "^2.9.0"
+    "typescript": "^5.9.3"
   },
   "categories": [
     "Programming Languages"
