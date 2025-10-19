@@ -1,0 +1,236 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PIC18 assembly",
+	"patterns": [
+		{
+			"include": "#instructions"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#directives"
+		},
+		{
+			"name": "comment.line",
+			"match": ";.*$"
+		},
+		{
+			"comment": "Label",
+			"name": "entity.name.function",
+			"match": "^[ \\t]*([A-Za-z_\\?][\\dA-Za-z_\\?\\$]*):"
+		},
+		{
+			"include": "#includeDefine"
+		}
+	],
+	"repository": {
+		"instructions": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.byte-oriented.add",
+					"match": "^[ \\t]*([Aa][Dd][Dd][Ww][Ff]|[Aa][Dd][Dd][Ww][Ff][Cc])\\b"
+				},
+				{
+					"name": "entity.name.tag.byte-oriented.subtract",
+					"match": "^[ \\t]*([Ss][Uu][Bb][Ff][Ww][Bb]|[Ss][Uu][Bb][Ww][Ff]|[Ss][Uu][Bb][Ww][Ff][Bb])\\b"
+				},
+				{
+					"name": "entity.name.tag.byte-oriented.comparison",
+					"match": "^[ \\t]*([Cc][Pp][Ff][Ss][Ee][Qq]|[Cc][Pp][Ff][Ss][Gg][Tt]|[Cc][Pp][Ff][Ss][Ll][Tt])\\b"
+				},
+				{
+					"name": "entity.name.tag.byte-oriented.move",
+					"match": "^[ \\t]*([Mm][Oo][Vv][Ff]|[Mm][Oo][Vv][Ff][Ff]|[Mm][Oo][Vv][Ww][Ff])\\b"
+				},
+				{
+					"name": "entity.name.tag.byte-oriented.increment",
+					"match": "^[ \\t]*([Ii][Nn][Cc][Ff]|[Ii][Nn][Cc][Ff][Ss][Zz]|[Ii][Nn][Ff][Ss][Nn][Zz])\\b"
+				},
+				{
+					"name": "entity.name.tag.byte-oriented.decrement",
+					"match": "^[ \\t]*([Dd][Ee][Cc][Ff]|[Dd][Ee][Cc][Ff][Ss][Zz]|[Dd][Cc][Ff][Ss][Nn][Zz])\\b"
+				},
+				{
+					"name": "entity.name.tag.byte-oriented.bitwise",
+					"match": "^[ \\t]*([Aa][Nn][Dd][Ww][Ff]|[Ii][Oo][Rr][Ww][Ff]|[Xx][Oo][Rr][Ww][Ff]|[Rr][Ll][Cc][Ff]|[Rr][Ll][Nn][Cc][Ff]|[Rr][Rr][Cc][Ff]|[Rr][Rr][Nn][Cc][Ff])\\b"
+				},
+				{
+					"name": "entity.name.tag.byte-oriented.other",
+					"match": "^[ \\t]*([Cc][Ll][Rr][Ff]|[Ss][Ee][Tt][Ff]|[Cc][Oo][Mm][Ff]|[Nn][Ee][Gg][Ff]|[Mm][Uu][Ll][Ww][Ff]|[Ss][Ww][Aa][Pp][Ff]|[Tt][Ss][Tt][Ff][Ss][Zz])\\b"
+				},
+				{
+					"name": "entity.name.tag.bit-oriented",
+					"match": "^[ \\t]*([Bb][Cc][Ff]|[Bb][Ss][Ff]|[Bb][Tt][Ff][Ss][Cc]|[Bb][Tt][Ff][Ss][Ss]|[Bb][Tt][Gg])\\b"
+				},
+				{
+					"name": "entity.name.tag.control.branch",
+					"match": "^[ \\t]*([Bb][Cc]|[Bb][Nn]|[Bb][Nn][Cc]|[Bb][Nn][Nn]|[Bb][Nn][Oo][Vv]|[Bb][Nn][Zz]|[Bb][Oo][Vv]|[Bb][Rr][Aa]|[Bb][Zz])\\b"
+				},
+				{
+					"name": "entity.name.tag.stack",
+					"match": "^[ \\t]*([Cc][Aa][Ll][Ll]|[Rr][Cc][Aa][Ll][Ll]|[Pp][Oo][Pp]|[Pp][Uu][Ss][Hh]|[Rr][Ee][Tt][Uu][Rr][Nn]|[Rr][Ee][Tt][Ll][Ww])\\b"
+				},
+				{
+					"name": "entity.name.tag.other",
+					"match": "^[ \\t]*([Gg][Oo][Tt][Oo]|[Cc][Ll][Rr][Ww][Dd][Tt]|[Dd][Aa][Ww]|[Nn][Oo][Pp]|[Rr][Ee][Ss][Ee][Tt]|[Rr][Ee][Tt][Ff][Ii][Ee]|[Ss][Ll][Ee][Ee][Pp])\\b"
+				},
+				{
+					"name": "entity.name.tag.literal.wreg",
+					"match": "^[ \\t]*([Aa][Dd][Dd][Ll][Ww]|[Aa][Nn][Dd][Ll][Ww]|[Ii][Oo][Rr][Ll][Ww]|[Mm][Oo][Vv][Ll][Ww]|[Mm][Uu][Ll][Ll][Ww]|[Rr][Ee][Tt][Ll][Ww]|[Ss][Uu][Bb][Ll][Ww]|[Xx][Oo][Rr][Ll][Ww])\\b"
+				},
+				{
+					"name": "entity.name.tag.literal.other",
+					"match": "^[ \\t]*([Ll][Ff][Ss][Rr]|[Mm][Oo][Vv][Ll][Bb])\\b"
+				},
+				{
+					"name": "entity.name.tag.memory",
+					"match": "^[ \\t]*[Tt][Bb][Ll]([Rr][Dd]|[Ww][Tt])(\\*(\\+|\\-)?|\\+\\*)[ \\t]*$"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.single",
+					"match": "'.*'"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.binary",
+					"match": "\\b[01]+B\\b"
+				},
+				{
+					"name": "constant.numeric.octal",
+					"match": "\\b([0-7])+(O|o|Q|q)\\b"
+				},
+				{
+					"name": "constant.numeric.decimal",
+					"match": "\\b\\d+(D|d)?\\b"
+				},
+				{
+					"name": "constant.numeric.hexadecimal",
+					"match": "\\b0([\\da-fA-F]+(H|h)|(x|X)[\\da-fA-F]+)\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "constant.language.current_pc",
+					"match": "\\s\\$(\\s|$)"
+				},
+				{
+					"name": "constant.language.address_byte",
+					"match": "\\b([Ll][Oo][Ww]( [Hh][Ii][Gg][Hh][Ww][Oo][Rr][Dd])?|[Hh][Ii][Gg][Hh])\\b"
+				},
+				{
+					"name": "constant.language.shift",
+					"match": "\\b([Ss][Hh][Ll]|[Ss][Hh][Rr])\\b"
+				},
+				{
+					"name": "constant.language.comparison",
+					"match": "\\b([Gg][Ee]|[Gg][Tt]|[Ll][Ee]|[Ll][Tt]|[Ee][Qq]|[Nn][Ee])\\b"
+				},
+				{
+					"name": "constant.language.and",
+					"match": "\\b[Aa][Nn][Dd]\\b"
+				}
+			]
+		},
+		"directives": {
+			"patterns": [
+				{
+					"name": "keyword.control.preprocessor",
+					"match": "^[ \\t]*#([Uu][Nn][Dd][Ee][Ff]|[Ii][Ff]|[Ii][Ff][Dd][Ee][Ff]|[Ii][Ff][Nn][Dd][Ee][Ff]|[Ee][Ll][Ss][Ee]|[Ee][Nn][Dd][Ii][Ff])\\b"
+				},
+				{
+					"name": "meta.preprocessor",
+					"match": "\\b(([Aa][Ll][Ii][Gg][Nn]|[Aa][Ss][Mm][Oo][Pp][Tt]|[Bb][Aa][Nn][Kk][Ss][Ee][Ll]|[Cc][Aa][Ll][Ll][Ss][Tt][Aa][Cc][Kk]|[Cc][Oo][Nn][Dd]|[Nn][Oo][Cc][Oo][Nn][Dd]|[Cc][Oo][Nn][Ff][Ii][Gg]|[Dd][Bb]|[Dd][Ww]|[Dd][Ss]|[Dd][Aa][Bb][Ss]|[Dd][Ll][Aa][Bb][Ss]|[Dd][Dd][Ww]|[Ee][Ll][Ss][Ee]|[Ee][Ll][Ss][Ii][Ff]|[Ee][Nn][Dd][Ii][Ff]|[Ee][Nn][Dd]|[Ee][Nn][Dd][Mm]|[Ee][Qq][Uu]|[Ee][Rr][Rr][Oo][Rr]|[Ee][Xx][Pp][Aa][Nn][Dd]|[Nn][Oo][Ee][Xx][Pp][Aa][Nn][Dd]|[Ee][Xx][Tt][Rr][Nn]|[Ff][Nn][Aa][Dd][Dd][Rr]|[Ff][Nn][Aa][Rr][Gg]|[Ff][Nn][Bb][Rr][Ee][Aa][Kk]|[Ff][Nn][Cc][Aa][Ll][Ll]|[Ff][Nn][Cc][Oo][Nn][Ff]|[Ff][Nn][Ii][Nn][Dd][Ii][Rr]|[Ff][Nn][Ss][Ii][Zz][Ee]|[Ff][Nn][Rr][Oo][Oo][Tt]|[Gg][Ll][Oo][Bb][Aa][Ll]|[Ii][Ff]|[Ii][Nn][Cc][Ll][Uu][Dd][Ee]|[Ii][Rr][Pp]|[Ii][Rr][Pp][Cc]|[Ll][Ii][Ss][Tt]|[Nn][Oo][Ll][Ii][Ss][Tt]|[Ll][Oo][Cc][Aa][Ll]|[Mm][Aa][Cc][Rr][Oo]|[Mm][Ee][Ss][Ss][Gg]|[Oo][Rr][Gg]|[Pp][Aa][Gg][Ee][Ll][Ee][Nn]|[Pp][Aa][Gg][Ee][Ss][Ee][Ll]|[Pp][Aa][Gg][Ee][Ww][Ii][Dd][Tt][Hh]|[Pp][Rr][Oo][Cc][Ee][Ss][Ss][Oo][Rr]|[Pp][Ss][Ee][Cc][Tt]|[Rr][Aa][Dd][Ii][Xx]|[Rr][Ee][Pp][Tt]|[Ss][Ee][Tt]|[Ss][Ii][Gg][Nn][Aa][Tt]|[Ss][Uu][Bb][Tt][Ii][Tt][Ll][Ee]|[Tt][Ii][Tt][Ll][Ee]))\\b"
+				},
+				{
+					"name": "meta.preprocessor.banksel",
+					"match": "\\b[Bb][Aa][Nn][Kk][Ss][Ee][Ll](?=\\b|\\()"
+				},
+				{
+					"name": "meta.preprocessor.bankmask",
+					"match": "\\b[Bb][Aa][Nn][Kk][Mm][Aa][Ss][Kk](?=\\b|\\()"
+				},
+				{
+					"include": "#include"
+				},
+				{
+					"include": "#define"
+				},
+				{
+					"include": "#equ"
+				},
+				{
+					"include": "#registerOrWreg"
+				},
+				{
+					"include": "#acsOrBsr"
+				}
+			]
+		},
+		"include": {
+			"begin": "^[ \\t]*#([Ii][Nn][Cc][Ll][Uu][Dd][Ee])\\b",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.preprocessor.include"
+				}
+			},
+			"end": "$",
+			"patterns": [
+				{
+					"match": "[ \\t]+<[^<]+>([ \\t]|$)",
+					"name": "meta.preprocessor.string"
+				},
+				{
+					"match": "[ \\t]+\"[^\"]+\"([ \\t]|$)",
+					"name": "meta.preprocessor.string"
+				}
+			]
+		},
+		"define": {
+			"begin": "^[ \\t]*#([Dd][Ee][Ff][Ii][Nn][Ee])\\b",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.preprocessor.include"
+				}
+			},
+			"end": "[ \\t]+\\S+\\b",
+			"endCaptures": {
+				"0": {
+					"name": "meta.preprocessor"
+				}
+			}
+		},
+		"equ": {
+			"match": "^[ \\t]*([A-Za-z_\\?][\\dA-Za-z_\\?\\$]*)[ \\t]+(?=EQU)",
+			"name": "variable.name"
+		},
+		"registerOrWreg": {
+			"match": "(?<=([Aa][Dd][Dd][Ww][Ff]|[Aa][Dd][Dd][Ww][Ff][Cc]|[Aa][Nn][Dd][Ww][Ff]|[Cc][Oo][Mm][Ff]|[Dd][Ee][Cc][Ff]|[Dd][Ee][Cc][Ff][Ss][Zz]|[Dd][Cc][Ff][Ss][Nn][Zz]|[Ii][Nn][Cc][Ff]|[Ii][Nn][Cc][Ff][Ss][Zz]|[Ii][Nn][Ff][Ss][Nn][Zz]|[Ii][Oo][Rr][Ww][Ff]|[Mm][Oo][Vv][Ff]|[Rr][Ll][Cc][Ff]|[Rr][Ll][Nn][Cc][Ff]|[Rr][Rr][Cc][Ff]|[Rr][Rr][Nn][Cc][Ff]|[Ss][Uu][Bb][Ff][Ww][Bb]|[Ss][Uu][Bb][Ww][Ff]|[Ss][Uu][Bb][Ww][Ff][Bb]|[Ss][Ww][Aa][Pp][Ff]|[Xx][Oo][Rr][Ww][Ff])[^\\n]*,[ \\t]*)[WwFf](?=($|[, \\t;]))",
+			"name": "constant.character.escape"
+		},
+		"acsOrBsr": {
+			"match": "(?<=([Aa][Dd][Dd][Ww][Ff]|[Aa][Dd][Dd][Ww][Ff][Cc]|[Aa][Nn][Dd][Ww][Ff]|[Bb][Cc][Ff]|[Bb][Ss][Ff]|[Bb][Tt][Ff][Ss][Cc]|[Bb][Tt][Ff][Ss][Ss]|[Bb][Tt][Gg]|[Cc][Ll][Rr][Ff]|[Cc][Oo][Mm][Ff]|[Cc][Pp][Ff][Ss][Ee][Qq]|[Cc][Pp][Ff][Ss][Gg][Tt]|[Cc][Pp][Ff][Ss][Ll][Tt]|[Dd][Ee][Cc][Ff]|[Dd][Ee][Cc][Ff][Ss][Zz]|[Dd][Cc][Ff][Ss][Nn][Zz]|[Ii][Nn][Cc][Ff]|[Ii][Nn][Cc][Ff][Ss][Zz]|[Ii][Nn][Ff][Ss][Nn][Zz]|[Ii][Oo][Rr][Ww][Ff]|[Mm][Oo][Vv][Ff]|[Mm][Oo][Vv][Ww][Ff]|[Mm][Uu][Ll][Ww][Ff]|[Nn][Ee][Gg][Ff]|[Rr][Ll][Cc][Ff]|[Rr][Ll][Nn][Cc][Ff]|[Rr][Rr][Cc][Ff]|[Rr][Rr][Nn][Cc][Ff]|[Ss][Ee][Tt][Ff]|[Ss][Uu][Bb][Ff][Ww][Bb]|[Ss][Uu][Bb][Ww][Ff]|[Ss][Uu][Bb][Ww][Ff][Bb]|[Ss][Ww][Aa][Pp][Ff]|[Tt][Ss][Tt][Ff][Ss][Zz]|[Xx][Oo][Rr][Ww][Ff])[^\\n]*,[ \\t]*)[BbAaCc](?=($|[, \\t;]))",
+			"name": "constant.character.escape"
+		},
+		"includeDefine": {
+			"match": "\\b([Aa][Bb][Dd][Ee][Nn]|[Aa][Bb][Dd][Oo][Vv][Ff]|[Aa][Cc][Kk][Dd][Tt]|[Aa][Cc][Kk][Ee][Nn]|[Aa][Cc][Kk][Ss][Tt][Aa][Tt]|[Aa][Cc][Qq][Tt]0|[Aa][Cc][Qq][Tt]1|[Aa][Cc][Qq][Tt]2|[Aa][Dd][Cc][Oo][Nn]0|[Aa][Dd][Cc][Oo][Nn]1|[Aa][Dd][Cc][Oo][Nn]2|[Aa][Dd][Cc][Ss]0|[Aa][Dd][Cc][Ss]1|[Aa][Dd][Cc][Ss]2|[Aa][Dd][Dd][Ee][Nn]|[Aa][Dd][Ee][Nn]|[Aa][Dd][Ff][Mm]|[Aa][Dd][Ii][Ee]|[Aa][Dd][Ii][Ff]|[Aa][Dd][Ii][Pp]|[Aa][Dd][Mm][Ss][Kk]1|[Aa][Dd][Mm][Ss][Kk]2|[Aa][Dd][Mm][Ss][Kk]3|[Aa][Dd][Mm][Ss][Kk]4|[Aa][Dd][Mm][Ss][Kk]5|[Aa][Dd][Oo][Nn]|[Aa][Dd][Rr][Ee][Ss]|[Aa][Dd][Rr][Ee][Ss][Hh]|[Aa][Dd][Rr][Ee][Ss][Ll]|[Aa][Nn]0|[Aa][Nn]1|[Aa][Nn]10|[Aa][Nn]11|[Aa][Nn]12|[Aa][Nn]2|[Aa][Nn]3|[Aa][Nn]4|[Aa][Nn]5|[Aa][Nn]6|[Aa][Nn]7|[Aa][Nn]8|[Aa][Nn]9|[Bb][Aa][Nn][Kk][Mm][Aa][Ss][Kk]|[Bb][Aa][Uu][Dd][Cc][Oo][Nn]|[Bb][Aa][Uu][Dd][Cc][Tt][Ll]|[Bb][Cc][Ll][Ii][Ee]|[Bb][Cc][Ll][Ii][Ff]|[Bb][Cc][Ll][Ii][Pp]|[Bb][Ff]|[Bb][Gg][Ss][Tt]|[Bb][Oo][Rr]|[Bb][Rr][Gg]16|[Bb][Rr][Gg][Hh]|[Bb][Rr][Gg][Hh]1|[Bb][Ss][Rr]|[Cc]|[Cc]1[Ii][Nn][Vv]|[Cc]1[Oo][Uu][Tt]|[Cc]1[Oo][Uu][Tt]_[Cc][Mm][Cc][Oo][Nn]|[Cc]1[Oo][Uu][Tt]_[Pp][Oo][Rr][Tt][Aa]|[Cc]2[Ii][Nn][Vv]|[Cc]2[Oo][Uu][Tt]|[Cc]2[Oo][Uu][Tt]_[Cc][Mm][Cc][Oo][Nn]|[Cc]2[Oo][Uu][Tt]_[Pp][Oo][Rr][Tt][Aa]|[Cc][Aa][Rr][Rr][Yy]|[Cc][Cc][Pp]1|[Cc][Cc][Pp]10|[Cc][Cc][Pp]1[Cc][Oo][Nn]|[Cc][Cc][Pp]1[Ii][Ee]|[Cc][Cc][Pp]1[Ii][Ff]|[Cc][Cc][Pp]1[Ii][Pp]|[Cc][Cc][Pp]1[Mm]0|[Cc][Cc][Pp]1[Mm]1|[Cc][Cc][Pp]1[Mm]2|[Cc][Cc][Pp]1[Mm]3|[Cc][Cc][Pp]1[Xx]|[Cc][Cc][Pp]1[Yy]|[Cc][Cc][Pp]2[Cc][Oo][Nn]|[Cc][Cc][Pp]2[Ii][Ee]|[Cc][Cc][Pp]2[Ii][Ff]|[Cc][Cc][Pp]2[Ii][Pp]|[Cc][Cc][Pp]2[Mm]0|[Cc][Cc][Pp]2[Mm]1|[Cc][Cc][Pp]2[Mm]2|[Cc][Cc][Pp]2[Mm]3|[Cc][Cc][Pp]2[Xx]|[Cc][Cc][Pp]2[Yy]|[Cc][Cc][Pp]2_[Pp][Aa]2|[Cc][Cc][Pp]2_[Pp][Oo][Rr][Tt][Bb]|[Cc][Cc][Pp]2_[Pp][Oo][Rr][Tt][Cc]|[Cc][Cc][Pp]9[Ee]|[Cc][Cc][Pp][Rr]1|[Cc][Cc][Pp][Rr]1[Hh]|[Cc][Cc][Pp][Rr]1[Ll]|[Cc][Cc][Pp][Rr]2|[Cc][Cc][Pp][Rr]2[Hh]|[Cc][Cc][Pp][Rr]2[Ll]|[Cc][Ff][Gg][Ss]|[Cc][Hh][Ss]0|[Cc][Hh][Ss]1|[Cc][Hh][Ss]2|[Cc][Hh][Ss]3|[Cc][Hh][Ss][Nn]3|[Cc][Ii][Ss]|[Cc][Kk]|[Cc][Kk][Ee]|[Cc][Kk][Pp]|[Cc][Ll][Kk][Ii]|[Cc][Ll][Kk][Oo]|[Cc][Mm]0|[Cc][Mm]1|[Cc][Mm]2|[Cc][Mm][Cc][Oo][Nn]|[Cc][Mm][Ee][Nn]0|[Cc][Mm][Ee][Nn]1|[Cc][Mm][Ee][Nn]2|[Cc][Mm][Ii][Ee]|[Cc][Mm][Ii][Ff]|[Cc][Mm][Ii][Pp]|[Cc][Rr][Ee][Nn]|[Cc][Ss]|[Cc][Ss][Rr][Cc]|[Cc][Ss][Rr][Cc]1|[Cc][Vv][Rr]0|[Cc][Vv][Rr]1|[Cc][Vv][Rr]2|[Cc][Vv][Rr]3|[Cc][Vv][Rr][Cc][Oo][Nn]|[Cc][Vv][Rr][Ee][Ff]|[Cc][Vv][Rr][Ee][Nn]|[Cc][Vv][Rr][Oo][Ee]|[Cc][Vv][Rr][Oo][Ee][Nn]|[Cc][Vv][Rr][Rr]|[Cc][Vv][Rr][Ss][Ss]|[Dd]|[Dd][Aa]|[Dd][Cc]|[Dd][Cc]1[Bb]0|[Dd][Cc]1[Bb]1|[Dd][Cc]2[Bb]0|[Dd][Cc]2[Bb]1|[Dd][Oo][Nn][Ee]|[Dd][Tt]|[Dd]_[Aa]|[Dd]_[Nn][Oo][Tt]_[Aa]|[Dd]_[Nn][Aa]|[Ee][Bb][Dd][Ii][Ss]|[Ee][Cc][Cc][Pp]1[Aa][Ss]|[Ee][Cc][Cc][Pp]1[Dd][Ee][Ll]|[Ee][Cc][Cc][Pp][Aa][Ss]|[Ee][Cc][Cc][Pp][Aa][Ss]0|[Ee][Cc][Cc][Pp][Aa][Ss]1|[Ee][Cc][Cc][Pp][Aa][Ss]2|[Ee][Cc][Cc][Pp][Aa][Ss][Ee]|[Ee][Ee][Aa][Dd][Rr]|[Ee][Ee][Cc][Oo][Nn]1|[Ee][Ee][Cc][Oo][Nn]2|[Ee][Ee][Dd][Aa][Tt][Aa]|[Ee][Ee][Ff][Ss]|[Ee][Ee][Ii][Ee]|[Ee][Ee][Ii][Ff]|[Ee][Ee][Ii][Pp]|[Ee][Ee][Pp][Gg][Dd]|[Ff][Ee][Rr][Rr]|[Ff][Ll][Tt]0|[Ff][Ll][Tt][Ss]|[Ff][Rr][Ee][Ee]|[Ff][Ss][Rr]0|[Ff][Ss][Rr]0[Hh]|[Ff][Ss][Rr]0[Ll]|[Ff][Ss][Rr]1|[Ff][Ss][Rr]1[Hh]|[Ff][Ss][Rr]1[Ll]|[Ff][Ss][Rr]2|[Ff][Ss][Rr]2[Hh]|[Ff][Ss][Rr]2[Ll]|[Gg][Cc][Ee][Nn]|[Gg][Ii][Ee]|[Gg][Ii][Ee][Hh]|[Gg][Ii][Ee][Ll]|[Gg][Ii][Ee]_[Gg][Ii][Ee][Hh]|[Gg][Oo]|[Gg][Oo][Dd][Oo][Nn][Ee]|[Gg][Oo]_[Dd][Oo][Nn][Ee]|[Gg][Oo]_[Nn][Oo][Tt]_[Dd][Oo][Nn][Ee]|[Gg][Oo]_[Nn][Dd][Oo][Nn][Ee]|[Hh][Ll][Vv][Dd][Cc][Oo][Nn]|[Hh][Ll][Vv][Dd][Ee][Nn]|[Hh][Ll][Vv][Dd][Ii][Ee]|[Hh][Ll][Vv][Dd][Ii][Ff]|[Hh][Ll][Vv][Dd][Ii][Nn]|[Hh][Ll][Vv][Dd][Ii][Pp]|[Hh][Ll][Vv][Dd][Ll]0|[Hh][Ll][Vv][Dd][Ll]1|[Hh][Ll][Vv][Dd][Ll]2|[Hh][Ll][Vv][Dd][Ll]3|[Ii][Bb][Ff]|[Ii][Bb][Oo][Vv]|[Ii][Dd][Ll][Ee][Nn]|[Ii][Nn][Dd][Ff]0|[Ii][Nn][Dd][Ff]1|[Ii][Nn][Dd][Ff]2|[Ii][Nn][Tt]0|[Ii][Nn][Tt]0[Ee]|[Ii][Nn][Tt]0[Ff]|[Ii][Nn][Tt]0[Ii][Ee]|[Ii][Nn][Tt]0[Ii][Ff]|[Ii][Nn][Tt]1|[Ii][Nn][Tt]1[Ee]|[Ii][Nn][Tt]1[Ff]|[Ii][Nn][Tt]1[Ii][Ee]|[Ii][Nn][Tt]1[Ii][Ff]|[Ii][Nn][Tt]1[Ii][Pp]|[Ii][Nn][Tt]1[Pp]|[Ii][Nn][Tt]2|[Ii][Nn][Tt]2[Ee]|[Ii][Nn][Tt]2[Ff]|[Ii][Nn][Tt]2[Ii][Ee]|[Ii][Nn][Tt]2[Ii][Ff]|[Ii][Nn][Tt]2[Ii][Pp]|[Ii][Nn][Tt]2[Pp]|[Ii][Nn][Tt][Cc][Oo][Nn]|[Ii][Nn][Tt][Cc][Oo][Nn]2|[Ii][Nn][Tt][Cc][Oo][Nn]3|[Ii][Nn][Tt][Ee][Dd][Gg]0|[Ii][Nn][Tt][Ee][Dd][Gg]1|[Ii][Nn][Tt][Ee][Dd][Gg]2|[Ii][Nn][Tt][Ss][Rr][Cc]|[Ii][Oo][Ff][Ss]|[Ii][Pp][Ee][Nn]|[Ii][Pp][Rr]1|[Ii][Pp][Rr]2|[Ii][Rr][Cc][Ff]0|[Ii][Rr][Cc][Ff]1|[Ii][Rr][Cc][Ff]2|[Ii][Rr][Vv][Ss][Tt]|[Ii][Vv][Rr][Ss][Tt]|[Kk][Bb][Ii]0|[Kk][Bb][Ii]1|[Kk][Bb][Ii]2|[Kk][Bb][Ii]3|[Ll][Aa]0|[Ll][Aa]1|[Ll][Aa]2|[Ll][Aa]3|[Ll][Aa]4|[Ll][Aa]5|[Ll][Aa]6|[Ll][Aa]7|[Ll][Aa][Tt][Aa]|[Ll][Aa][Tt][Aa]0|[Ll][Aa][Tt][Aa]1|[Ll][Aa][Tt][Aa]2|[Ll][Aa][Tt][Aa]3|[Ll][Aa][Tt][Aa]4|[Ll][Aa][Tt][Aa]5|[Ll][Aa][Tt][Aa]6|[Ll][Aa][Tt][Aa]7|[Ll][Aa][Tt][Bb]|[Ll][Aa][Tt][Bb]0|[Ll][Aa][Tt][Bb]1|[Ll][Aa][Tt][Bb]2|[Ll][Aa][Tt][Bb]3|[Ll][Aa][Tt][Bb]4|[Ll][Aa][Tt][Bb]5|[Ll][Aa][Tt][Bb]6|[Ll][Aa][Tt][Bb]7|[Ll][Aa][Tt][Cc]|[Ll][Aa][Tt][Cc]0|[Ll][Aa][Tt][Cc]1|[Ll][Aa][Tt][Cc]2|[Ll][Aa][Tt][Cc]3|[Ll][Aa][Tt][Cc]4|[Ll][Aa][Tt][Cc]5|[Ll][Aa][Tt][Cc]6|[Ll][Aa][Tt][Cc]7|[Ll][Aa][Tt][Dd]|[Ll][Aa][Tt][Dd]0|[Ll][Aa][Tt][Dd]1|[Ll][Aa][Tt][Dd]2|[Ll][Aa][Tt][Dd]3|[Ll][Aa][Tt][Dd]4|[Ll][Aa][Tt][Dd]5|[Ll][Aa][Tt][Dd]6|[Ll][Aa][Tt][Dd]7|[Ll][Aa][Tt][Ee]|[Ll][Aa][Tt][Ee]0|[Ll][Aa][Tt][Ee]1|[Ll][Aa][Tt][Ee]2|[Ll][Bb]0|[Ll][Bb]1|[Ll][Bb]2|[Ll][Bb]3|[Ll][Bb]4|[Ll][Bb]5|[Ll][Bb]6|[Ll][Bb]7|[Ll][Cc]0|[Ll][Cc]1|[Ll][Cc]2|[Ll][Cc]3|[Ll][Cc]4|[Ll][Cc]5|[Ll][Cc]6|[Ll][Cc]7|[Ll][Dd]0|[Ll][Dd]1|[Ll][Dd]2|[Ll][Dd]3|[Ll][Dd]4|[Ll][Dd]5|[Ll][Dd]6|[Ll][Dd]7|[Ll][Ee]0|[Ll][Ee]1|[Ll][Ee]2|[Ll][Vv][Dd][Cc][Oo][Nn]|[Ll][Vv][Dd][Ee][Nn]|[Ll][Vv][Dd][Ii][Ee]|[Ll][Vv][Dd][Ii][Ff]|[Ll][Vv][Dd][Ii][Nn]|[Ll][Vv][Dd][Ii][Pp]|[Ll][Vv][Dd][Ll]0|[Ll][Vv][Dd][Ll]1|[Ll][Vv][Dd][Ll]2|[Ll][Vv][Dd][Ll]3|[Ll][Vv][Vv]0|[Ll][Vv][Vv]1|[Ll][Vv][Vv]2|[Ll][Vv][Vv]3|[Mm][Cc][Ll][Rr]|[Nn]|[Nn][Ee][Gg][Aa][Tt][Ii][Vv][Ee]|[Nn][Oo][Tt]_[Aa]|[Nn][Oo][Tt]_[Aa][Dd][Dd][Rr][Ee][Ss][Ss]|[Nn][Oo][Tt]_[Bb][Oo][Rr]|[Nn][Oo][Tt]_[Cc][Ss]|[Nn][Oo][Tt]_[Dd][Oo][Nn][Ee]|[Nn][Oo][Tt]_[Mm][Cc][Ll][Rr]|[Nn][Oo][Tt]_[Pp][Dd]|[Nn][Oo][Tt]_[Pp][Oo][Rr]|[Nn][Oo][Tt]_[Rr][Bb][Pp][Uu]|[Nn][Oo][Tt]_[Rr][Dd]|[Nn][Oo][Tt]_[Rr][Ii]|[Nn][Oo][Tt]_[Ss][Ss]|[Nn][Oo][Tt]_[Tt]1[Ss][Yy][Nn][Cc]|[Nn][Oo][Tt]_[Tt]3[Ss][Yy][Nn][Cc]|[Nn][Oo][Tt]_[Tt][Oo]|[Nn][Oo][Tt]_[Ww]|[Nn][Oo][Tt]_[Ww][Rr]|[Nn][Oo][Tt]_[Ww][Rr][Ii][Tt][Ee]|[Oo][Bb][Ff]|[Oo][Ee][Rr][Rr]|[Oo][Ss][Cc]1|[Oo][Ss][Cc]2|[Oo][Ss][Cc][Cc][Oo][Nn]|[Oo][Ss][Cc][Ff][Ii][Ee]|[Oo][Ss][Cc][Ff][Ii][Ff]|[Oo][Ss][Cc][Ff][Ii][Pp]|[Oo][Ss][Cc][Tt][Uu][Nn][Ee]|[Oo][Ss][Tt][Ss]|[Oo][Vv]|[Oo][Vv][Ee][Rr][Ff][Ll][Oo][Ww]|[Pp]|[Pp]1[Aa]|[Pp]1[Bb]|[Pp]1[Cc]|[Pp]1[Dd]|[Pp]1[Mm]0|[Pp]1[Mm]1|[Pp][Aa]1|[Pp][Aa]2|[Pp][Aa][Gg][Ee][Mm][Aa][Ss][Kk]|[Pp][Bb]2|[Pp][Cc]|[Pp][Cc]2|[Pp][Cc]3[Ee]|[Pp][Cc][Ff][Gg]0|[Pp][Cc][Ff][Gg]1|[Pp][Cc][Ff][Gg]2|[Pp][Cc][Ff][Gg]3|[Pp][Cc][Ll]|[Pp][Cc][Ll][Aa][Tt]|[Pp][Cc][Ll][Aa][Tt][Hh]|[Pp][Cc][Ll][Aa][Tt][Uu]|[Pp][Dd]|[Pp][Dd]2|[Pp][Dd][Cc]0|[Pp][Dd][Cc]1|[Pp][Dd][Cc]2|[Pp][Dd][Cc]3|[Pp][Dd][Cc]4|[Pp][Dd][Cc]5|[Pp][Dd][Cc]6|[Pp][Ee][Ii][Ee]|[Pp][Ee][Ii][Ee]_[Gg][Ii][Ee][Ll]|[Pp][Ee][Nn]|[Pp][Gg][Cc]|[Pp][Gg][Dd]|[Pp][Gg][Mm]|[Pp][Ii][Ee]1|[Pp][Ii][Ee]2|[Pp][Ii][Rr]1|[Pp][Ii][Rr]2|[Pp][Ll][Ll][Ee][Nn]|[Pp][Ll][Uu][Ss][Ww]0|[Pp][Ll][Uu][Ss][Ww]1|[Pp][Ll][Uu][Ss][Ww]2|[Pp][Oo][Rr]|[Pp][Oo][Rr][Tt][Aa]|[Pp][Oo][Rr][Tt][Bb]|[Pp][Oo][Rr][Tt][Cc]|[Pp][Oo][Rr][Tt][Dd]|[Pp][Oo][Rr][Tt][Ee]|[Pp][Oo][Ss][Tt][Dd][Ee][Cc]0|[Pp][Oo][Ss][Tt][Dd][Ee][Cc]1|[Pp][Oo][Ss][Tt][Dd][Ee][Cc]2|[Pp][Oo][Ss][Tt][Ii][Nn][Cc]0|[Pp][Oo][Ss][Tt][Ii][Nn][Cc]1|[Pp][Oo][Ss][Tt][Ii][Nn][Cc]2|[Pp][Rr]2|[Pp][Rr][Ee][Ii][Nn][Cc]0|[Pp][Rr][Ee][Ii][Nn][Cc]1|[Pp][Rr][Ee][Ii][Nn][Cc]2|[Pp][Rr][Oo][Dd]|[Pp][Rr][Oo][Dd][Hh]|[Pp][Rr][Oo][Dd][Ll]|[Pp][Rr][Ss][Ee][Nn]|[Pp][Ss][Aa]|[Pp][Ss][Pp]0|[Pp][Ss][Pp]1|[Pp][Ss][Pp]2|[Pp][Ss][Pp]3|[Pp][Ss][Pp]4|[Pp][Ss][Pp]5|[Pp][Ss][Pp]6|[Pp][Ss][Pp]7|[Pp][Ss][Pp][Ii][Ee]|[Pp][Ss][Pp][Ii][Ff]|[Pp][Ss][Pp][Ii][Pp]|[Pp][Ss][Pp][Mm][Oo][Dd][Ee]|[Pp][Ss][Ss][Aa][Cc]0|[Pp][Ss][Ss][Aa][Cc]1|[Pp][Ss][Ss][Bb][Dd]0|[Pp][Ss][Ss][Bb][Dd]1|[Pp][Ww][Mm]1[Cc][Oo][Nn]|[Rr]|[Rr][Aa]0|[Rr][Aa]1|[Rr][Aa]2|[Rr][Aa]3|[Rr][Aa]4|[Rr][Aa]5|[Rr][Aa]6|[Rr][Aa]7|[Rr][Bb]0|[Rr][Bb]1|[Rr][Bb]2|[Rr][Bb]3|[Rr][Bb]4|[Rr][Bb]5|[Rr][Bb]6|[Rr][Bb]7|[Rr][Bb][Ii][Ee]|[Rr][Bb][Ii][Ff]|[Rr][Bb][Ii][Pp]|[Rr][Bb][Pp][Uu]|[Rr][Cc]0|[Rr][Cc]1|[Rr][Cc]1[Ii][Ee]|[Rr][Cc]1[Ii][Ff]|[Rr][Cc]1[Ii][Pp]|[Rr][Cc]2|[Rr][Cc]3|[Rr][Cc]4|[Rr][Cc]5|[Rr][Cc]6|[Rr][Cc]7|[Rr][Cc]8_9|[Rr][Cc]9|[Rr][Cc][Dd]8|[Rr][Cc][Ee][Nn]|[Rr][Cc][Ii][Dd][Ll]|[Rr][Cc][Ii][Ee]|[Rr][Cc][Ii][Ff]|[Rr][Cc][Ii][Pp]|[Rr][Cc][Mm][Tt]|[Rr][Cc][Oo][Nn]|[Rr][Cc][Rr][Ee][Gg]|[Rr][Cc][Ss][Tt][Aa]|[Rr][Dd]|[Rr][Dd]0|[Rr][Dd]1|[Rr][Dd]16|[Rr][Dd]163|[Rr][Dd]2|[Rr][Dd]3|[Rr][Dd]4|[Rr][Dd]5|[Rr][Dd]6|[Rr][Dd]7|[Rr][Dd][Ee]|[Rr][Ee]0|[Rr][Ee]1|[Rr][Ee]2|[Rr][Ee]3|[Rr][Ii]|[Rr][Jj][Pp][Uu]|[Rr][Ss][Ee][Nn]|[Rr][Ww]|[Rr][Xx]|[Rr][Xx]9|[Rr][Xx]9[Dd]|[Rr][Xx][Cc][Kk][Pp]|[Rr][Xx][Dd][Tt][Pp]|[Rr]_[Nn][Oo][Tt]_[Ww]|[Rr]_[Ww]|[Rr]_[Nn][Ww]|[Ss]|[Ss][Bb][Oo][Rr][Ee][Nn]|[Ss][Cc][Kk]|[Ss][Cc][Kk][Pp]|[Ss][Cc][Ll]|[Ss][Cc][Ss]0|[Ss][Cc][Ss]1|[Ss][Dd][Aa]|[Ss][Dd][Ii]|[Ss][Dd][Oo]|[Ss][Ee][Nn]|[Ss][Ee][Nn][Dd][Bb]|[Ss][Ee][Nn][Dd][Bb]1|[Ss][Mm][Pp]|[Ss][Oo][Ss][Cc][Ee][Nn]|[Ss][Oo][Ss][Cc][Ee][Nn]3|[Ss][Pp]0|[Ss][Pp]1|[Ss][Pp]2|[Ss][Pp]3|[Ss][Pp]4|[Ss][Pp][Aa][Cc][Ee]_[Cc][Oo][Dd][Ee]|[Ss][Pp][Aa][Cc][Ee]_[Dd][Aa][Tt][Aa]|[Ss][Pp][Aa][Cc][Ee]_[Ee][Ee][Pp][Rr][Oo][Mm]|[Ss][Pp][Bb][Rr][Gg]|[Ss][Pp][Bb][Rr][Gg][Hh]|[Ss][Pp][Ee][Nn]|[Ss][Rr][Ee][Nn]|[Ss][Rr][Ee][Nn][Aa]|[Ss][Ss]|[Ss][Ss]2|[Ss][Ss][Pp][Aa][Dd][Dd]|[Ss][Ss][Pp][Bb][Uu][Ff]|[Ss][Ss][Pp][Cc][Oo][Nn]1|[Ss][Ss][Pp][Cc][Oo][Nn]2|[Ss][Ss][Pp][Ee][Nn]|[Ss][Ss][Pp][Ii][Ee]|[Ss][Ss][Pp][Ii][Ff]|[Ss][Ss][Pp][Ii][Pp]|[Ss][Ss][Pp][Mm]0|[Ss][Ss][Pp][Mm]1|[Ss][Ss][Pp][Mm]2|[Ss][Ss][Pp][Mm]3|[Ss][Ss][Pp][Oo][Vv]|[Ss][Ss][Pp][Ss][Tt][Aa][Tt]|[Ss][Tt][Aa][Rr][Tt]|[Ss][Tt][Aa][Tt][Uu][Ss]|[Ss][Tt][Kk][Ff][Uu][Ll]|[Ss][Tt][Kk][Oo][Vv][Ff]|[Ss][Tt][Kk][Pp][Tt][Rr]|[Ss][Tt][Kk][Uu][Nn][Ff]|[Ss][Tt][Oo][Pp]|[Ss][Ww][Dd][Tt][Ee]|[Ss][Ww][Dd][Tt][Ee][Nn]|[Ss][Yy][Nn][Cc]|[Ss][Yy][Nn][Cc]1|[Tt]016[Bb][Ii][Tt]|[Tt]08[Bb][Ii][Tt]|[Tt]0[Cc][Kk][Ii]|[Tt]0[Cc][Oo][Nn]|[Tt]0[Cc][Ss]|[Tt]0[Ii][Ee]|[Tt]0[Ii][Ff]|[Tt]0[Pp][Ss]0|[Tt]0[Pp][Ss]1|[Tt]0[Pp][Ss]2|[Tt]0[Pp][Ss]3|[Tt]0[Ss][Ee]|[Tt]13[Cc][Kk][Ii]|[Tt]1[Cc][Kk][Ii]|[Tt]1[Cc][Kk][Pp][Ss]0|[Tt]1[Cc][Kk][Pp][Ss]1|[Tt]1[Cc][Oo][Nn]|[Tt]1[Oo][Ss][Cc][Ee][Nn]|[Tt]1[Oo][Ss][Ii]|[Tt]1[Oo][Ss][Oo]|[Tt]1[Rr][Dd]16|[Tt]1[Rr][Uu][Nn]|[Tt]1[Ss][Yy][Nn][Cc]|[Tt]2[Cc][Kk][Pp][Ss]0|[Tt]2[Cc][Kk][Pp][Ss]1|[Tt]2[Cc][Oo][Nn]|[Tt]2[Oo][Uu][Tt][Pp][Ss]0|[Tt]2[Oo][Uu][Tt][Pp][Ss]1|[Tt]2[Oo][Uu][Tt][Pp][Ss]2|[Tt]2[Oo][Uu][Tt][Pp][Ss]3|[Tt]3[Cc][Cc][Pp]1|[Tt]3[Cc][Cc][Pp]2|[Tt]3[Cc][Kk][Pp][Ss]0|[Tt]3[Cc][Kk][Pp][Ss]1|[Tt]3[Cc][Oo][Nn]|[Tt]3[Rr][Dd]16|[Tt]3[Ss][Yy][Nn][Cc]|[Tt][Aa][Bb][Ll][Aa][Tt]|[Tt][Bb][Ll][Pp][Tt][Rr]|[Tt][Bb][Ll][Pp][Tt][Rr][Hh]|[Tt][Bb][Ll][Pp][Tt][Rr][Ll]|[Tt][Bb][Ll][Pp][Tt][Rr][Uu]|[Tt][Mm][Rr]0|[Tt][Mm][Rr]0[Hh]|[Tt][Mm][Rr]0[Ii][Ee]|[Tt][Mm][Rr]0[Ii][Ff]|[Tt][Mm][Rr]0[Ii][Pp]|[Tt][Mm][Rr]0[Ll]|[Tt][Mm][Rr]0[Oo][Nn]|[Tt][Mm][Rr]1|[Tt][Mm][Rr]1[Cc][Ss]|[Tt][Mm][Rr]1[Hh]|[Tt][Mm][Rr]1[Ii][Ee]|[Tt][Mm][Rr]1[Ii][Ff]|[Tt][Mm][Rr]1[Ii][Pp]|[Tt][Mm][Rr]1[Ll]|[Tt][Mm][Rr]1[Oo][Nn]|[Tt][Mm][Rr]2|[Tt][Mm][Rr]2[Ii][Ee]|[Tt][Mm][Rr]2[Ii][Ff]|[Tt][Mm][Rr]2[Ii][Pp]|[Tt][Mm][Rr]2[Oo][Nn]|[Tt][Mm][Rr]3|[Tt][Mm][Rr]3[Cc][Ss]|[Tt][Mm][Rr]3[Hh]|[Tt][Mm][Rr]3[Ii][Ee]|[Tt][Mm][Rr]3[Ii][Ff]|[Tt][Mm][Rr]3[Ii][Pp]|[Tt][Mm][Rr]3[Ll]|[Tt][Mm][Rr]3[Oo][Nn]|[Tt][Oo]|[Tt][Oo][Ss]|[Tt][Oo][Ss][Hh]|[Tt][Oo][Ss][Ll]|[Tt][Oo][Ss][Uu]|[Tt][Oo][Uu][Tt][Pp][Ss]0|[Tt][Oo][Uu][Tt][Pp][Ss]1|[Tt][Oo][Uu][Tt][Pp][Ss]2|[Tt][Oo][Uu][Tt][Pp][Ss]3|[Tt][Rr][Ii][Ss][Aa]|[Tt][Rr][Ii][Ss][Aa]0|[Tt][Rr][Ii][Ss][Aa]1|[Tt][Rr][Ii][Ss][Aa]2|[Tt][Rr][Ii][Ss][Aa]3|[Tt][Rr][Ii][Ss][Aa]4|[Tt][Rr][Ii][Ss][Aa]5|[Tt][Rr][Ii][Ss][Aa]6|[Tt][Rr][Ii][Ss][Aa]7|[Tt][Rr][Ii][Ss][Bb]|[Tt][Rr][Ii][Ss][Bb]0|[Tt][Rr][Ii][Ss][Bb]1|[Tt][Rr][Ii][Ss][Bb]2|[Tt][Rr][Ii][Ss][Bb]3|[Tt][Rr][Ii][Ss][Bb]4|[Tt][Rr][Ii][Ss][Bb]5|[Tt][Rr][Ii][Ss][Bb]6|[Tt][Rr][Ii][Ss][Bb]7|[Tt][Rr][Ii][Ss][Cc]|[Tt][Rr][Ii][Ss][Cc]0|[Tt][Rr][Ii][Ss][Cc]1|[Tt][Rr][Ii][Ss][Cc]2|[Tt][Rr][Ii][Ss][Cc]3|[Tt][Rr][Ii][Ss][Cc]4|[Tt][Rr][Ii][Ss][Cc]5|[Tt][Rr][Ii][Ss][Cc]6|[Tt][Rr][Ii][Ss][Cc]7|[Tt][Rr][Ii][Ss][Dd]|[Tt][Rr][Ii][Ss][Dd]0|[Tt][Rr][Ii][Ss][Dd]1|[Tt][Rr][Ii][Ss][Dd]2|[Tt][Rr][Ii][Ss][Dd]3|[Tt][Rr][Ii][Ss][Dd]4|[Tt][Rr][Ii][Ss][Dd]5|[Tt][Rr][Ii][Ss][Dd]6|[Tt][Rr][Ii][Ss][Dd]7|[Tt][Rr][Ii][Ss][Ee]|[Tt][Rr][Ii][Ss][Ee]0|[Tt][Rr][Ii][Ss][Ee]1|[Tt][Rr][Ii][Ss][Ee]2|[Tt][Rr][Mm][Tt]|[Tt][Rr][Mm][Tt]1|[Tt][Uu][Nn]0|[Tt][Uu][Nn]1|[Tt][Uu][Nn]2|[Tt][Uu][Nn]3|[Tt][Uu][Nn]4|[Tt][Xx]|[Tt][Xx]1[Ii][Ee]|[Tt][Xx]1[Ii][Ff]|[Tt][Xx]1[Ii][Pp]|[Tt][Xx]8_9|[Tt][Xx]9|[Tt][Xx]91|[Tt][Xx]9[Dd]|[Tt][Xx]9[Dd]1|[Tt][Xx][Cc][Kk][Pp]|[Tt][Xx][Dd]8|[Tt][Xx][Ee][Nn]|[Tt][Xx][Ee][Nn]1|[Tt][Xx][Ii][Ee]|[Tt][Xx][Ii][Ff]|[Tt][Xx][Ii][Pp]|[Tt][Xx][Rr][Ee][Gg]|[Tt][Xx][Ss][Tt][Aa]|[Uu][Aa]|[Uu][Ll][Pp][Ww][Uu][Ii][Nn]|[Vv][Cc][Ff][Gg]0|[Vv][Cc][Ff][Gg]01|[Vv][Cc][Ff][Gg]1|[Vv][Cc][Ff][Gg]11|[Vv][Dd][Ii][Rr][Mm][Aa][Gg]|[Vv][Pp][Pp]|[Vv][Rr][Ee][Ff][Nn]|[Vv][Rr][Ee][Ff][Pp]|[Ww]4[Ee]|[Ww][Aa][Ii][Tt]0|[Ww][Aa][Ii][Tt]1|[Ww][Cc][Oo][Ll]|[Ww][Dd][Tt][Cc][Oo][Nn]|[Ww][Mm]0|[Ww][Mm]1|[Ww][Rr]|[Ww][Rr][Ee]|[Ww][Rr][Ee][Gg]|[Ww][Rr][Ee][Nn]|[Ww][Rr][Ee][Rr][Rr]|[Ww][Uu][Ee]|[Zz]|[Zz][Ee][Rr][Oo]|_[Bb][Oo][Rr][Ee][Nn]_[Nn][Oo][Ss][Ll][Pp]_2[Ll]|_[Bb][Oo][Rr][Ee][Nn]_[Oo][Ff][Ff]_2[Ll]|_[Bb][Oo][Rr][Ee][Nn]_[Oo][Nn]_2[Ll]|_[Bb][Oo][Rr][Ee][Nn]_[Ss][Bb][Oo][Rr][Dd][Ii][Ss]_2[Ll]|_[Bb][Oo][Rr][Vv]_0_2[Ll]|_[Bb][Oo][Rr][Vv]_1_2[Ll]|_[Bb][Oo][Rr][Vv]_2_2[Ll]|_[Bb][Oo][Rr][Vv]_3_2[Ll]|_[Cc][Cc][Pp]2[Mm][Xx]_[Pp][Oo][Rr][Tt][Bb][Ee]_3[Hh]|_[Cc][Cc][Pp]2[Mm][Xx]_[Pp][Oo][Rr][Tt][Cc]_3[Hh]|_[Cc][Oo][Nn][Ff][Ii][Gg]1[Hh]|_[Cc][Oo][Nn][Ff][Ii][Gg]2[Hh]|_[Cc][Oo][Nn][Ff][Ii][Gg]2[Ll]|_[Cc][Oo][Nn][Ff][Ii][Gg]3[Hh]|_[Cc][Oo][Nn][Ff][Ii][Gg]4[Ll]|_[Cc][Oo][Nn][Ff][Ii][Gg]5[Hh]|_[Cc][Oo][Nn][Ff][Ii][Gg]5[Ll]|_[Cc][Oo][Nn][Ff][Ii][Gg]6[Hh]|_[Cc][Oo][Nn][Ff][Ii][Gg]6[Ll]|_[Cc][Oo][Nn][Ff][Ii][Gg]7[Hh]|_[Cc][Oo][Nn][Ff][Ii][Gg]7[Ll]|_[Cc][Pp]0_[Oo][Ff][Ff]_5[Ll]|_[Cc][Pp]0_[Oo][Nn]_5[Ll]|_[Cc][Pp]1_[Oo][Ff][Ff]_5[Ll]|_[Cc][Pp]1_[Oo][Nn]_5[Ll]|_[Cc][Pp]2_[Oo][Ff][Ff]_5[Ll]|_[Cc][Pp]2_[Oo][Nn]_5[Ll]|_[Cc][Pp]3_[Oo][Ff][Ff]_5[Ll]|_[Cc][Pp]3_[Oo][Nn]_5[Ll]|_[Cc][Pp][Bb]_[Oo][Ff][Ff]_5[Hh]|_[Cc][Pp][Bb]_[Oo][Nn]_5[Hh]|_[Cc][Pp][Dd]_[Oo][Ff][Ff]_5[Hh]|_[Cc][Pp][Dd]_[Oo][Nn]_5[Hh]|_[Dd][Ee][Bb][Uu][Gg]_[Oo][Ff][Ff]_4[Ll]|_[Dd][Ee][Bb][Uu][Gg]_[Oo][Nn]_4[Ll]|_[Dd][Ee][Vv][Ii][Dd]1|_[Dd][Ee][Vv][Ii][Dd]2|_[Ee][Bb][Tt][Rr]0_[Oo][Ff][Ff]_7[Ll]|_[Ee][Bb][Tt][Rr]0_[Oo][Nn]_7[Ll]|_[Ee][Bb][Tt][Rr]1_[Oo][Ff][Ff]_7[Ll]|_[Ee][Bb][Tt][Rr]1_[Oo][Nn]_7[Ll]|_[Ee][Bb][Tt][Rr]2_[Oo][Ff][Ff]_7[Ll]|_[Ee][Bb][Tt][Rr]2_[Oo][Nn]_7[Ll]|_[Ee][Bb][Tt][Rr]3_[Oo][Ff][Ff]_7[Ll]|_[Ee][Bb][Tt][Rr]3_[Oo][Nn]_7[Ll]|_[Ee][Bb][Tt][Rr][Bb]_[Oo][Ff][Ff]_7[Hh]|_[Ee][Bb][Tt][Rr][Bb]_[Oo][Nn]_7[Hh]|_[Ff][Cc][Mm][Ee][Nn]_[Oo][Ff][Ff]_1[Hh]|_[Ff][Cc][Mm][Ee][Nn]_[Oo][Nn]_1[Hh]|_[Ii][Dd][Ll][Oo][Cc]0|_[Ii][Dd][Ll][Oo][Cc]1|_[Ii][Dd][Ll][Oo][Cc]2|_[Ii][Dd][Ll][Oo][Cc]3|_[Ii][Dd][Ll][Oo][Cc]4|_[Ii][Dd][Ll][Oo][Cc]5|_[Ii][Dd][Ll][Oo][Cc]6|_[Ii][Dd][Ll][Oo][Cc]7|_[Ii][Ee][Ss][Oo]_[Oo][Ff][Ff]_1[Hh]|_[Ii][Ee][Ss][Oo]_[Oo][Nn]_1[Hh]|_[Ll][Pp][Tt]1[Oo][Ss][Cc]_[Oo][Ff][Ff]_3[Hh]|_[Ll][Pp][Tt]1[Oo][Ss][Cc]_[Oo][Nn]_3[Hh]|_[Ll][Vv][Pp]_[Oo][Ff][Ff]_4[Ll]|_[Ll][Vv][Pp]_[Oo][Nn]_4[Ll]|_[Mm][Cc][Ll][Rr][Ee]_[Oo][Ff][Ff]_3[Hh]|_[Mm][Cc][Ll][Rr][Ee]_[Oo][Nn]_3[Hh]|_[Oo][Ss][Cc]_[Ee][Cc][Ii][Oo]6_1[Hh]|_[Oo][Ss][Cc]_[Ee][Cc]_1[Hh]|_[Oo][Ss][Cc]_[Hh][Ss][Pp][Ll][Ll]_1[Hh]|_[Oo][Ss][Cc]_[Hh][Ss]_1[Hh]|_[Oo][Ss][Cc]_[Ii][Nn][Tt][Ii][Oo]67_1[Hh]|_[Oo][Ss][Cc]_[Ii][Nn][Tt][Ii][Oo]7_1[Hh]|_[Oo][Ss][Cc]_[Ll][Pp]_1[Hh]|_[Oo][Ss][Cc]_[Rr][Cc][Ii][Oo]6_1[Hh]|_[Oo][Ss][Cc]_[Rr][Cc]_1[Hh]|_[Oo][Ss][Cc]_[Xx][Tt]_1[Hh]|_[Pp][Bb][Aa][Dd][Ee][Nn]_[Oo][Ff][Ff]_3[Hh]|_[Pp][Bb][Aa][Dd][Ee][Nn]_[Oo][Nn]_3[Hh]|_[Pp][Ww][Rr][Tt]_[Oo][Ff][Ff]_2[Ll]|_[Pp][Ww][Rr][Tt]_[Oo][Nn]_2[Ll]|_[Ss][Tt][Vv][Rr][Ee][Nn]_[Oo][Ff][Ff]_4[Ll]|_[Ss][Tt][Vv][Rr][Ee][Nn]_[Oo][Nn]_4[Ll]|_[Ww][Dd][Tt][Pp][Ss]_1024_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_128_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_16384_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_16_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_1_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_2048_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_256_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_2_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_32768_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_32_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_4096_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_4_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_512_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_64_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_8192_2[Hh]|_[Ww][Dd][Tt][Pp][Ss]_8_2[Hh]|_[Ww][Dd][Tt]_[Oo][Ff][Ff]_2[Hh]|_[Ww][Dd][Tt]_[Oo][Nn]_2[Hh]|_[Ww][Rr][Tt]0_[Oo][Ff][Ff]_6[Ll]|_[Ww][Rr][Tt]0_[Oo][Nn]_6[Ll]|_[Ww][Rr][Tt]1_[Oo][Ff][Ff]_6[Ll]|_[Ww][Rr][Tt]1_[Oo][Nn]_6[Ll]|_[Ww][Rr][Tt]2_[Oo][Ff][Ff]_6[Ll]|_[Ww][Rr][Tt]2_[Oo][Nn]_6[Ll]|_[Ww][Rr][Tt]3_[Oo][Ff][Ff]_6[Ll]|_[Ww][Rr][Tt]3_[Oo][Nn]_6[Ll]|_[Ww][Rr][Tt][Bb]_[Oo][Ff][Ff]_6[Hh]|_[Ww][Rr][Tt][Bb]_[Oo][Nn]_6[Hh]|_[Ww][Rr][Tt][Cc]_[Oo][Ff][Ff]_6[Hh]|_[Ww][Rr][Tt][Cc]_[Oo][Nn]_6[Hh]|_[Ww][Rr][Tt][Dd]_[Oo][Ff][Ff]_6[Hh]|_[Ww][Rr][Tt][Dd]_[Oo][Nn]_6[Hh]|_[Xx][Ii][Nn][Ss][Tt]_[Oo][Ff][Ff]_4[Ll]|_[Xx][Ii][Nn][Ss][Tt]_[Oo][Nn]_4[Ll]|[Nn][Aa]|[Nn][Aa][Dd][Dd][Rr][Ee][Ss][Ss]|[Nn][Bb][Oo][Rr]|[Nn][Cc][Ss]|[Nn][Dd][Oo][Nn][Ee]|[Nn][Mm][Cc][Ll][Rr]|[Nn][Pp][Dd]|[Nn][Pp][Oo][Rr]|[Nn][Rr][Bb][Pp][Uu]|[Nn][Rr][Dd]|[Nn][Rr][Ii]|[Nn][Ss][Ss]|[Nn][Tt]1[Ss][Yy][Nn][Cc]|[Nn][Tt]3[Ss][Yy][Nn][Cc]|[Nn][Tt][Oo]|[Nn][Ww]|[Nn][Ww][Rr]|[Nn][Ww][Rr][Ii][Tt][Ee])\\b",
+			"name": "constant.character.escape"
+		}
+	},
+	"scopeName": "source.picasm"
+}

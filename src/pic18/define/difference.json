@@ -1,0 +1,1974 @@
+{
+  "ABDEN": {
+    "xc8": "BANKMASK(BAUDCON), 0, a",
+    "mpasm": "0"
+  },
+  "ABDOVF": {
+    "xc8": "BANKMASK(BAUDCON), 7, a",
+    "mpasm": "7"
+  },
+  "ACKDT": {
+    "xc8": "BANKMASK(SSPCON2), 5, a",
+    "mpasm": "5"
+  },
+  "ACKEN": {
+    "xc8": "BANKMASK(SSPCON2), 4, a",
+    "mpasm": "4"
+  },
+  "ACKSTAT": {
+    "xc8": "BANKMASK(SSPCON2), 6, a",
+    "mpasm": "6"
+  },
+  "ACQT0": {
+    "xc8": "BANKMASK(ADCON2), 3, a",
+    "mpasm": "3"
+  },
+  "ACQT1": {
+    "xc8": "BANKMASK(ADCON2), 4, a",
+    "mpasm": "4"
+  },
+  "ACQT2": {
+    "xc8": "BANKMASK(ADCON2), 5, a",
+    "mpasm": "5"
+  },
+  "ADCS0": {
+    "xc8": "BANKMASK(ADCON2), 0, a",
+    "mpasm": "0"
+  },
+  "ADCS1": {
+    "xc8": "BANKMASK(ADCON2), 1, a",
+    "mpasm": "1"
+  },
+  "ADCS2": {
+    "xc8": "BANKMASK(ADCON2), 2, a",
+    "mpasm": "2"
+  },
+  "ADDEN": {
+    "xc8": "BANKMASK(RCSTA), 3, a",
+    "mpasm": "3"
+  },
+  "ADEN": {
+    "xc8": "BANKMASK(RCSTA), 3, a",
+    "mpasm": "3"
+  },
+  "ADFM": {
+    "xc8": "BANKMASK(ADCON2), 7, a",
+    "mpasm": "7"
+  },
+  "ADIE": {
+    "xc8": "BANKMASK(PIE1), 6, a",
+    "mpasm": "6"
+  },
+  "ADIF": {
+    "xc8": "BANKMASK(PIR1), 6, a",
+    "mpasm": "6"
+  },
+  "ADIP": {
+    "xc8": "BANKMASK(IPR1), 6, a",
+    "mpasm": "6"
+  },
+  "ADMSK1": {
+    "xc8": "BANKMASK(SSPCON2), 1, a",
+    "mpasm": "1"
+  },
+  "ADMSK2": {
+    "xc8": "BANKMASK(SSPCON2), 2, a",
+    "mpasm": "2"
+  },
+  "ADMSK3": {
+    "xc8": "BANKMASK(SSPCON2), 3, a",
+    "mpasm": "3"
+  },
+  "ADMSK4": {
+    "xc8": "BANKMASK(SSPCON2), 4, a",
+    "mpasm": "4"
+  },
+  "ADMSK5": {
+    "xc8": "BANKMASK(SSPCON2), 5, a",
+    "mpasm": "5"
+  },
+  "ADON": {
+    "xc8": "BANKMASK(ADCON0), 0, a",
+    "mpasm": "0"
+  },
+  "AN0": {
+    "xc8": "BANKMASK(PORTA), 0, a",
+    "mpasm": "0"
+  },
+  "AN1": {
+    "xc8": "BANKMASK(PORTA), 1, a",
+    "mpasm": "1"
+  },
+  "AN10": {
+    "xc8": "BANKMASK(PORTB), 1, a",
+    "mpasm": "1"
+  },
+  "AN11": {
+    "xc8": "BANKMASK(PORTB), 4, a",
+    "mpasm": "4"
+  },
+  "AN12": {
+    "xc8": "BANKMASK(PORTB), 0, a",
+    "mpasm": "0"
+  },
+  "AN2": {
+    "xc8": "BANKMASK(PORTA), 2, a",
+    "mpasm": "2"
+  },
+  "AN3": {
+    "xc8": "BANKMASK(PORTA), 3, a",
+    "mpasm": "3"
+  },
+  "AN4": {
+    "xc8": "BANKMASK(PORTA), 5, a",
+    "mpasm": "5"
+  },
+  "AN5": {
+    "xc8": "BANKMASK(PORTE), 0, a",
+    "mpasm": "0"
+  },
+  "AN6": {
+    "xc8": "BANKMASK(PORTE), 1, a",
+    "mpasm": "1"
+  },
+  "AN7": {
+    "xc8": "BANKMASK(PORTE), 2, a",
+    "mpasm": "2"
+  },
+  "AN8": {
+    "xc8": "BANKMASK(PORTB), 2, a",
+    "mpasm": "2"
+  },
+  "AN9": {
+    "xc8": "BANKMASK(PORTB), 3, a",
+    "mpasm": "3"
+  },
+  "BCLIE": {
+    "xc8": "BANKMASK(PIE2), 3, a",
+    "mpasm": "3"
+  },
+  "BCLIF": {
+    "xc8": "BANKMASK(PIR2), 3, a",
+    "mpasm": "3"
+  },
+  "BCLIP": {
+    "xc8": "BANKMASK(IPR2), 3, a",
+    "mpasm": "3"
+  },
+  "BF": {
+    "xc8": "BANKMASK(SSPSTAT), 0, a",
+    "mpasm": "0"
+  },
+  "BGST": {
+    "xc8": "BANKMASK(HLVDCON), 5, a",
+    "mpasm": "5"
+  },
+  "BOR": {
+    "xc8": "BANKMASK(RCON), 0, a",
+    "mpasm": "0"
+  },
+  "BRG16": {
+    "xc8": "BANKMASK(BAUDCON), 3, a",
+    "mpasm": "3"
+  },
+  "BRGH": {
+    "xc8": "BANKMASK(TXSTA), 2, a",
+    "mpasm": "2"
+  },
+  "C1INV": {
+    "xc8": "BANKMASK(CMCON), 4, a",
+    "mpasm": "4"
+  },
+  "C2INV": {
+    "xc8": "BANKMASK(CMCON), 5, a",
+    "mpasm": "5"
+  },
+  "CCP1": {
+    "xc8": "BANKMASK(PORTC), 2, a",
+    "mpasm": "2"
+  },
+  "CCP1IE": {
+    "xc8": "BANKMASK(PIE1), 2, a",
+    "mpasm": "2"
+  },
+  "CCP1IF": {
+    "xc8": "BANKMASK(PIR1), 2, a",
+    "mpasm": "2"
+  },
+  "CCP1IP": {
+    "xc8": "BANKMASK(IPR1), 2, a",
+    "mpasm": "2"
+  },
+  "CCP1M0": {
+    "xc8": "BANKMASK(CCP1CON), 0, a",
+    "mpasm": "0"
+  },
+  "CCP1M1": {
+    "xc8": "BANKMASK(CCP1CON), 1, a",
+    "mpasm": "1"
+  },
+  "CCP1M2": {
+    "xc8": "BANKMASK(CCP1CON), 2, a",
+    "mpasm": "2"
+  },
+  "CCP1M3": {
+    "xc8": "BANKMASK(CCP1CON), 3, a",
+    "mpasm": "3"
+  },
+  "CCP1X": {
+    "xc8": "BANKMASK(CCP1CON), 5, a",
+    "mpasm": "5"
+  },
+  "CCP1Y": {
+    "xc8": "BANKMASK(CCP1CON), 4, a",
+    "mpasm": "4"
+  },
+  "CCP2IE": {
+    "xc8": "BANKMASK(PIE2), 0, a",
+    "mpasm": "0"
+  },
+  "CCP2IF": {
+    "xc8": "BANKMASK(PIR2), 0, a",
+    "mpasm": "0"
+  },
+  "CCP2IP": {
+    "xc8": "BANKMASK(IPR2), 0, a",
+    "mpasm": "0"
+  },
+  "CCP2M0": {
+    "xc8": "BANKMASK(CCP2CON), 0, a",
+    "mpasm": "0"
+  },
+  "CCP2M1": {
+    "xc8": "BANKMASK(CCP2CON), 1, a",
+    "mpasm": "1"
+  },
+  "CCP2M2": {
+    "xc8": "BANKMASK(CCP2CON), 2, a",
+    "mpasm": "2"
+  },
+  "CCP2M3": {
+    "xc8": "BANKMASK(CCP2CON), 3, a",
+    "mpasm": "3"
+  },
+  "CCP2X": {
+    "xc8": "BANKMASK(CCP2CON), 5, a",
+    "mpasm": "5"
+  },
+  "CCP2Y": {
+    "xc8": "BANKMASK(CCP2CON), 4, a",
+    "mpasm": "4"
+  },
+  "CFGS": {
+    "xc8": "BANKMASK(EECON1), 6, a",
+    "mpasm": "6"
+  },
+  "CHS0": {
+    "xc8": "BANKMASK(ADCON0), 2, a",
+    "mpasm": "2"
+  },
+  "CHS1": {
+    "xc8": "BANKMASK(ADCON0), 3, a",
+    "mpasm": "3"
+  },
+  "CHS2": {
+    "xc8": "BANKMASK(ADCON0), 4, a",
+    "mpasm": "4"
+  },
+  "CHS3": {
+    "xc8": "BANKMASK(ADCON0), 5, a",
+    "mpasm": "5"
+  },
+  "CIS": {
+    "xc8": "BANKMASK(CMCON), 3, a",
+    "mpasm": "3"
+  },
+  "CK": {
+    "xc8": "BANKMASK(PORTC), 6, a",
+    "mpasm": "6"
+  },
+  "CKE": {
+    "xc8": "BANKMASK(SSPSTAT), 6, a",
+    "mpasm": "6"
+  },
+  "CKP": {
+    "xc8": "BANKMASK(SSPCON1), 4, a",
+    "mpasm": "4"
+  },
+  "CLKI": {
+    "xc8": "BANKMASK(PORTA), 7, a",
+    "mpasm": "7"
+  },
+  "CLKO": {
+    "xc8": "BANKMASK(PORTA), 6, a",
+    "mpasm": "6"
+  },
+  "CM0": {
+    "xc8": "BANKMASK(CMCON), 0, a",
+    "mpasm": "0"
+  },
+  "CM1": {
+    "xc8": "BANKMASK(CMCON), 1, a",
+    "mpasm": "1"
+  },
+  "CM2": {
+    "xc8": "BANKMASK(CMCON), 2, a",
+    "mpasm": "2"
+  },
+  "CMIE": {
+    "xc8": "BANKMASK(PIE2), 6, a",
+    "mpasm": "6"
+  },
+  "CMIF": {
+    "xc8": "BANKMASK(PIR2), 6, a",
+    "mpasm": "6"
+  },
+  "CMIP": {
+    "xc8": "BANKMASK(IPR2), 6, a",
+    "mpasm": "6"
+  },
+  "CREN": {
+    "xc8": "BANKMASK(RCSTA), 4, a",
+    "mpasm": "4"
+  },
+  "CS": {
+    "xc8": "BANKMASK(PORTE), 2, a",
+    "mpasm": "2"
+  },
+  "CSRC": {
+    "xc8": "BANKMASK(TXSTA), 7, a",
+    "mpasm": "7"
+  },
+  "CVR0": {
+    "xc8": "BANKMASK(CVRCON), 0, a",
+    "mpasm": "0"
+  },
+  "CVR1": {
+    "xc8": "BANKMASK(CVRCON), 1, a",
+    "mpasm": "1"
+  },
+  "CVR2": {
+    "xc8": "BANKMASK(CVRCON), 2, a",
+    "mpasm": "2"
+  },
+  "CVR3": {
+    "xc8": "BANKMASK(CVRCON), 3, a",
+    "mpasm": "3"
+  },
+  "CVREF": {
+    "xc8": "BANKMASK(PORTA), 2, a",
+    "mpasm": "2"
+  },
+  "CVREN": {
+    "xc8": "BANKMASK(CVRCON), 7, a",
+    "mpasm": "7"
+  },
+  "CVROE": {
+    "xc8": "BANKMASK(CVRCON), 6, a",
+    "mpasm": "6"
+  },
+  "CVRR": {
+    "xc8": "BANKMASK(CVRCON), 5, a",
+    "mpasm": "5"
+  },
+  "CVRSS": {
+    "xc8": "BANKMASK(CVRCON), 4, a",
+    "mpasm": "4"
+  },
+  "DC": {
+    "xc8": "BANKMASK(STATUS), 1, a",
+    "mpasm": "1"
+  },
+  "DC1B0": {
+    "xc8": "BANKMASK(CCP1CON), 4, a",
+    "mpasm": "4"
+  },
+  "DC1B1": {
+    "xc8": "BANKMASK(CCP1CON), 5, a",
+    "mpasm": "5"
+  },
+  "DC2B0": {
+    "xc8": "BANKMASK(CCP2CON), 4, a",
+    "mpasm": "4"
+  },
+  "DC2B1": {
+    "xc8": "BANKMASK(CCP2CON), 5, a",
+    "mpasm": "5"
+  },
+  "DONE": {
+    "xc8": "BANKMASK(ADCON0), 1, a",
+    "mpasm": "1"
+  },
+  "D_A": {
+    "xc8": "BANKMASK(SSPSTAT), 5, a",
+    "mpasm": "5"
+  },
+  "D_NOT_A": {
+    "xc8": "BANKMASK(SSPSTAT), 5, a",
+    "mpasm": "5"
+  },
+  "ECCPAS0": {
+    "xc8": "BANKMASK(ECCP1AS), 4, a",
+    "mpasm": "4"
+  },
+  "ECCPAS1": {
+    "xc8": "BANKMASK(ECCP1AS), 5, a",
+    "mpasm": "5"
+  },
+  "ECCPAS2": {
+    "xc8": "BANKMASK(ECCP1AS), 6, a",
+    "mpasm": "6"
+  },
+  "ECCPASE": {
+    "xc8": "BANKMASK(ECCP1AS), 7, a",
+    "mpasm": "7"
+  },
+  "EEIE": {
+    "xc8": "BANKMASK(PIE2), 4, a",
+    "mpasm": "4"
+  },
+  "EEIF": {
+    "xc8": "BANKMASK(PIR2), 4, a",
+    "mpasm": "4"
+  },
+  "EEIP": {
+    "xc8": "BANKMASK(IPR2), 4, a",
+    "mpasm": "4"
+  },
+  "EEPGD": {
+    "xc8": "BANKMASK(EECON1), 7, a",
+    "mpasm": "7"
+  },
+  "FERR": {
+    "xc8": "BANKMASK(RCSTA), 2, a",
+    "mpasm": "2"
+  },
+  "FLT0": {
+    "xc8": "BANKMASK(PORTB), 0, a",
+    "mpasm": "0"
+  },
+  "FLTS": {
+    "xc8": "BANKMASK(OSCCON), 2, a",
+    "mpasm": "2"
+  },
+  "FREE": {
+    "xc8": "BANKMASK(EECON1), 4, a",
+    "mpasm": "4"
+  },
+  "GCEN": {
+    "xc8": "BANKMASK(SSPCON2), 7, a",
+    "mpasm": "7"
+  },
+  "GIE": {
+    "xc8": "BANKMASK(INTCON), 7, a",
+    "mpasm": "7"
+  },
+  "GIEH": {
+    "xc8": "BANKMASK(INTCON), 7, a",
+    "mpasm": "7"
+  },
+  "GIEL": {
+    "xc8": "BANKMASK(INTCON), 6, a",
+    "mpasm": "6"
+  },
+  "GIE_GIEH": {
+    "xc8": "BANKMASK(INTCON), 7, a",
+    "mpasm": "7"
+  },
+  "GO": {
+    "xc8": "BANKMASK(ADCON0), 1, a",
+    "mpasm": "1"
+  },
+  "GO_DONE": {
+    "xc8": "BANKMASK(ADCON0), 1, a",
+    "mpasm": "1"
+  },
+  "GO_NOT_DONE": {
+    "xc8": "BANKMASK(ADCON0), 1, a",
+    "mpasm": "1"
+  },
+  "HLVDEN": {
+    "xc8": "BANKMASK(HLVDCON), 4, a",
+    "mpasm": "4"
+  },
+  "HLVDIE": {
+    "xc8": "BANKMASK(PIE2), 2, a",
+    "mpasm": "2"
+  },
+  "HLVDIF": {
+    "xc8": "BANKMASK(PIR2), 2, a",
+    "mpasm": "2"
+  },
+  "HLVDIN": {
+    "xc8": "BANKMASK(PORTA), 5, a",
+    "mpasm": "5"
+  },
+  "HLVDIP": {
+    "xc8": "BANKMASK(IPR2), 2, a",
+    "mpasm": "2"
+  },
+  "HLVDL0": {
+    "xc8": "BANKMASK(HLVDCON), 0, a",
+    "mpasm": "0"
+  },
+  "HLVDL1": {
+    "xc8": "BANKMASK(HLVDCON), 1, a",
+    "mpasm": "1"
+  },
+  "HLVDL2": {
+    "xc8": "BANKMASK(HLVDCON), 2, a",
+    "mpasm": "2"
+  },
+  "HLVDL3": {
+    "xc8": "BANKMASK(HLVDCON), 3, a",
+    "mpasm": "3"
+  },
+  "IBF": {
+    "xc8": "BANKMASK(TRISE), 7, a",
+    "mpasm": "7"
+  },
+  "IBOV": {
+    "xc8": "BANKMASK(TRISE), 5, a",
+    "mpasm": "5"
+  },
+  "IDLEN": {
+    "xc8": "BANKMASK(OSCCON), 7, a",
+    "mpasm": "7"
+  },
+  "INT0": {
+    "xc8": "BANKMASK(PORTB), 0, a",
+    "mpasm": "0"
+  },
+  "INT0E": {
+    "xc8": "BANKMASK(INTCON), 4, a",
+    "mpasm": "4"
+  },
+  "INT0F": {
+    "xc8": "BANKMASK(INTCON), 1, a",
+    "mpasm": "1"
+  },
+  "INT0IE": {
+    "xc8": "BANKMASK(INTCON), 4, a",
+    "mpasm": "4"
+  },
+  "INT0IF": {
+    "xc8": "BANKMASK(INTCON), 1, a",
+    "mpasm": "1"
+  },
+  "INT1": {
+    "xc8": "BANKMASK(PORTB), 1, a",
+    "mpasm": "1"
+  },
+  "INT1E": {
+    "xc8": "BANKMASK(INTCON3), 3, a",
+    "mpasm": "3"
+  },
+  "INT1F": {
+    "xc8": "BANKMASK(INTCON3), 0, a",
+    "mpasm": "0"
+  },
+  "INT1IE": {
+    "xc8": "BANKMASK(INTCON3), 3, a",
+    "mpasm": "3"
+  },
+  "INT1IF": {
+    "xc8": "BANKMASK(INTCON3), 0, a",
+    "mpasm": "0"
+  },
+  "INT1IP": {
+    "xc8": "BANKMASK(INTCON3), 6, a",
+    "mpasm": "6"
+  },
+  "INT1P": {
+    "xc8": "BANKMASK(INTCON3), 6, a",
+    "mpasm": "6"
+  },
+  "INT2": {
+    "xc8": "BANKMASK(PORTB), 2, a",
+    "mpasm": "2"
+  },
+  "INT2E": {
+    "xc8": "BANKMASK(INTCON3), 4, a",
+    "mpasm": "4"
+  },
+  "INT2F": {
+    "xc8": "BANKMASK(INTCON3), 1, a",
+    "mpasm": "1"
+  },
+  "INT2IE": {
+    "xc8": "BANKMASK(INTCON3), 4, a",
+    "mpasm": "4"
+  },
+  "INT2IF": {
+    "xc8": "BANKMASK(INTCON3), 1, a",
+    "mpasm": "1"
+  },
+  "INT2IP": {
+    "xc8": "BANKMASK(INTCON3), 7, a",
+    "mpasm": "7"
+  },
+  "INT2P": {
+    "xc8": "BANKMASK(INTCON3), 7, a",
+    "mpasm": "7"
+  },
+  "INTEDG0": {
+    "xc8": "BANKMASK(INTCON2), 6, a",
+    "mpasm": "6"
+  },
+  "INTEDG1": {
+    "xc8": "BANKMASK(INTCON2), 5, a",
+    "mpasm": "5"
+  },
+  "INTEDG2": {
+    "xc8": "BANKMASK(INTCON2), 4, a",
+    "mpasm": "4"
+  },
+  "INTSRC": {
+    "xc8": "BANKMASK(OSCTUNE), 7, a",
+    "mpasm": "7"
+  },
+  "IOFS": {
+    "xc8": "BANKMASK(OSCCON), 2, a",
+    "mpasm": "2"
+  },
+  "IPEN": {
+    "xc8": "BANKMASK(RCON), 7, a",
+    "mpasm": "7"
+  },
+  "IRCF0": {
+    "xc8": "BANKMASK(OSCCON), 4, a",
+    "mpasm": "4"
+  },
+  "IRCF1": {
+    "xc8": "BANKMASK(OSCCON), 5, a",
+    "mpasm": "5"
+  },
+  "IRCF2": {
+    "xc8": "BANKMASK(OSCCON), 6, a",
+    "mpasm": "6"
+  },
+  "IRVST": {
+    "xc8": "BANKMASK(HLVDCON), 5, a",
+    "mpasm": "5"
+  },
+  "IVRST": {
+    "xc8": "BANKMASK(HLVDCON), 5, a",
+    "mpasm": "5"
+  },
+  "KBI0": {
+    "xc8": "BANKMASK(PORTB), 4, a",
+    "mpasm": "4"
+  },
+  "KBI1": {
+    "xc8": "BANKMASK(PORTB), 5, a",
+    "mpasm": "5"
+  },
+  "KBI2": {
+    "xc8": "BANKMASK(PORTB), 6, a",
+    "mpasm": "6"
+  },
+  "KBI3": {
+    "xc8": "BANKMASK(PORTB), 7, a",
+    "mpasm": "7"
+  },
+  "LATA0": {
+    "xc8": "BANKMASK(LATA), 0, a",
+    "mpasm": "0"
+  },
+  "LATA1": {
+    "xc8": "BANKMASK(LATA), 1, a",
+    "mpasm": "1"
+  },
+  "LATA2": {
+    "xc8": "BANKMASK(LATA), 2, a",
+    "mpasm": "2"
+  },
+  "LATA3": {
+    "xc8": "BANKMASK(LATA), 3, a",
+    "mpasm": "3"
+  },
+  "LATA4": {
+    "xc8": "BANKMASK(LATA), 4, a",
+    "mpasm": "4"
+  },
+  "LATA5": {
+    "xc8": "BANKMASK(LATA), 5, a",
+    "mpasm": "5"
+  },
+  "LATA6": {
+    "xc8": "BANKMASK(LATA), 6, a",
+    "mpasm": "6"
+  },
+  "LATA7": {
+    "xc8": "BANKMASK(LATA), 7, a",
+    "mpasm": "7"
+  },
+  "LATB0": {
+    "xc8": "BANKMASK(LATB), 0, a",
+    "mpasm": "0"
+  },
+  "LATB1": {
+    "xc8": "BANKMASK(LATB), 1, a",
+    "mpasm": "1"
+  },
+  "LATB2": {
+    "xc8": "BANKMASK(LATB), 2, a",
+    "mpasm": "2"
+  },
+  "LATB3": {
+    "xc8": "BANKMASK(LATB), 3, a",
+    "mpasm": "3"
+  },
+  "LATB4": {
+    "xc8": "BANKMASK(LATB), 4, a",
+    "mpasm": "4"
+  },
+  "LATB5": {
+    "xc8": "BANKMASK(LATB), 5, a",
+    "mpasm": "5"
+  },
+  "LATB6": {
+    "xc8": "BANKMASK(LATB), 6, a",
+    "mpasm": "6"
+  },
+  "LATB7": {
+    "xc8": "BANKMASK(LATB), 7, a",
+    "mpasm": "7"
+  },
+  "LATC0": {
+    "xc8": "BANKMASK(LATC), 0, a",
+    "mpasm": "0"
+  },
+  "LATC1": {
+    "xc8": "BANKMASK(LATC), 1, a",
+    "mpasm": "1"
+  },
+  "LATC2": {
+    "xc8": "BANKMASK(LATC), 2, a",
+    "mpasm": "2"
+  },
+  "LATC3": {
+    "xc8": "BANKMASK(LATC), 3, a",
+    "mpasm": "3"
+  },
+  "LATC4": {
+    "xc8": "BANKMASK(LATC), 4, a",
+    "mpasm": "4"
+  },
+  "LATC5": {
+    "xc8": "BANKMASK(LATC), 5, a",
+    "mpasm": "5"
+  },
+  "LATC6": {
+    "xc8": "BANKMASK(LATC), 6, a",
+    "mpasm": "6"
+  },
+  "LATC7": {
+    "xc8": "BANKMASK(LATC), 7, a",
+    "mpasm": "7"
+  },
+  "LATD0": {
+    "xc8": "BANKMASK(LATD), 0, a",
+    "mpasm": "0"
+  },
+  "LATD1": {
+    "xc8": "BANKMASK(LATD), 1, a",
+    "mpasm": "1"
+  },
+  "LATD2": {
+    "xc8": "BANKMASK(LATD), 2, a",
+    "mpasm": "2"
+  },
+  "LATD3": {
+    "xc8": "BANKMASK(LATD), 3, a",
+    "mpasm": "3"
+  },
+  "LATD4": {
+    "xc8": "BANKMASK(LATD), 4, a",
+    "mpasm": "4"
+  },
+  "LATD5": {
+    "xc8": "BANKMASK(LATD), 5, a",
+    "mpasm": "5"
+  },
+  "LATD6": {
+    "xc8": "BANKMASK(LATD), 6, a",
+    "mpasm": "6"
+  },
+  "LATD7": {
+    "xc8": "BANKMASK(LATD), 7, a",
+    "mpasm": "7"
+  },
+  "LATE0": {
+    "xc8": "BANKMASK(LATE), 0, a",
+    "mpasm": "0"
+  },
+  "LATE1": {
+    "xc8": "BANKMASK(LATE), 1, a",
+    "mpasm": "1"
+  },
+  "LATE2": {
+    "xc8": "BANKMASK(LATE), 2, a",
+    "mpasm": "2"
+  },
+  "LVDEN": {
+    "xc8": "BANKMASK(HLVDCON), 4, a",
+    "mpasm": "4"
+  },
+  "LVDIE": {
+    "xc8": "BANKMASK(PIE2), 2, a",
+    "mpasm": "2"
+  },
+  "LVDIF": {
+    "xc8": "BANKMASK(PIR2), 2, a",
+    "mpasm": "2"
+  },
+  "LVDIN": {
+    "xc8": "BANKMASK(PORTA), 5, a",
+    "mpasm": "5"
+  },
+  "LVDIP": {
+    "xc8": "BANKMASK(IPR2), 2, a",
+    "mpasm": "2"
+  },
+  "LVDL0": {
+    "xc8": "BANKMASK(HLVDCON), 0, a",
+    "mpasm": "0"
+  },
+  "LVDL1": {
+    "xc8": "BANKMASK(HLVDCON), 1, a",
+    "mpasm": "1"
+  },
+  "LVDL2": {
+    "xc8": "BANKMASK(HLVDCON), 2, a",
+    "mpasm": "2"
+  },
+  "LVDL3": {
+    "xc8": "BANKMASK(HLVDCON), 3, a",
+    "mpasm": "3"
+  },
+  "LVV0": {
+    "xc8": "BANKMASK(HLVDCON), 0, a",
+    "mpasm": "0"
+  },
+  "LVV1": {
+    "xc8": "BANKMASK(HLVDCON), 1, a",
+    "mpasm": "1"
+  },
+  "LVV2": {
+    "xc8": "BANKMASK(HLVDCON), 2, a",
+    "mpasm": "2"
+  },
+  "LVV3": {
+    "xc8": "BANKMASK(HLVDCON), 3, a",
+    "mpasm": "3"
+  },
+  "MCLR": {
+    "xc8": "BANKMASK(PORTE), 3, a",
+    "mpasm": "3"
+  },
+  "NOT_A": {
+    "xc8": "BANKMASK(SSPSTAT), 5, a",
+    "mpasm": "5"
+  },
+  "NOT_ADDRESS": {
+    "xc8": "BANKMASK(SSPSTAT), 5, a",
+    "mpasm": "5"
+  },
+  "NOT_BOR": {
+    "xc8": "BANKMASK(RCON), 0, a",
+    "mpasm": "0"
+  },
+  "NOT_CS": {
+    "xc8": "BANKMASK(PORTE), 2, a",
+    "mpasm": "2"
+  },
+  "NOT_DONE": {
+    "xc8": "BANKMASK(ADCON0), 1, a",
+    "mpasm": "1"
+  },
+  "NOT_MCLR": {
+    "xc8": "BANKMASK(PORTE), 3, a",
+    "mpasm": "3"
+  },
+  "NOT_PD": {
+    "xc8": "BANKMASK(RCON), 2, a",
+    "mpasm": "2"
+  },
+  "NOT_POR": {
+    "xc8": "BANKMASK(RCON), 1, a",
+    "mpasm": "1"
+  },
+  "NOT_RBPU": {
+    "xc8": "BANKMASK(INTCON2), 7, a",
+    "mpasm": "7"
+  },
+  "NOT_RD": {
+    "xc8": "BANKMASK(PORTE), 0, a",
+    "mpasm": "0"
+  },
+  "NOT_RI": {
+    "xc8": "BANKMASK(RCON), 4, a",
+    "mpasm": "4"
+  },
+  "NOT_SS": {
+    "xc8": "BANKMASK(PORTA), 5, a",
+    "mpasm": "5"
+  },
+  "NOT_T1SYNC": {
+    "xc8": "BANKMASK(T1CON), 2, a",
+    "mpasm": "2"
+  },
+  "NOT_T3SYNC": {
+    "xc8": "BANKMASK(T3CON), 2, a",
+    "mpasm": "2"
+  },
+  "NOT_TO": {
+    "xc8": "BANKMASK(RCON), 3, a",
+    "mpasm": "3"
+  },
+  "NOT_W": {
+    "xc8": "BANKMASK(SSPSTAT), 2, a",
+    "mpasm": "2"
+  },
+  "NOT_WR": {
+    "xc8": "BANKMASK(PORTE), 1, a",
+    "mpasm": "1"
+  },
+  "NOT_WRITE": {
+    "xc8": "BANKMASK(SSPSTAT), 2, a",
+    "mpasm": "2"
+  },
+  "OBF": {
+    "xc8": "BANKMASK(TRISE), 6, a",
+    "mpasm": "6"
+  },
+  "OERR": {
+    "xc8": "BANKMASK(RCSTA), 1, a",
+    "mpasm": "1"
+  },
+  "OSC1": {
+    "xc8": "BANKMASK(PORTA), 7, a",
+    "mpasm": "7"
+  },
+  "OSC2": {
+    "xc8": "BANKMASK(PORTA), 6, a",
+    "mpasm": "6"
+  },
+  "OSCFIE": {
+    "xc8": "BANKMASK(PIE2), 7, a",
+    "mpasm": "7"
+  },
+  "OSCFIF": {
+    "xc8": "BANKMASK(PIR2), 7, a",
+    "mpasm": "7"
+  },
+  "OSCFIP": {
+    "xc8": "BANKMASK(IPR2), 7, a",
+    "mpasm": "7"
+  },
+  "OSTS": {
+    "xc8": "BANKMASK(OSCCON), 3, a",
+    "mpasm": "3"
+  },
+  "OV": {
+    "xc8": "BANKMASK(STATUS), 3, a",
+    "mpasm": "3"
+  },
+  "P1A": {
+    "xc8": "BANKMASK(PORTC), 2, a",
+    "mpasm": "2"
+  },
+  "P1B": {
+    "xc8": "BANKMASK(PORTD), 5, a",
+    "mpasm": "5"
+  },
+  "P1C": {
+    "xc8": "BANKMASK(PORTD), 6, a",
+    "mpasm": "6"
+  },
+  "P1D": {
+    "xc8": "BANKMASK(PORTD), 7, a",
+    "mpasm": "7"
+  },
+  "P1M0": {
+    "xc8": "BANKMASK(CCP1CON), 6, a",
+    "mpasm": "6"
+  },
+  "P1M1": {
+    "xc8": "BANKMASK(CCP1CON), 7, a",
+    "mpasm": "7"
+  },
+  "PCFG0": {
+    "xc8": "BANKMASK(ADCON1), 0, a",
+    "mpasm": "0"
+  },
+  "PCFG1": {
+    "xc8": "BANKMASK(ADCON1), 1, a",
+    "mpasm": "1"
+  },
+  "PCFG2": {
+    "xc8": "BANKMASK(ADCON1), 2, a",
+    "mpasm": "2"
+  },
+  "PCFG3": {
+    "xc8": "BANKMASK(ADCON1), 3, a",
+    "mpasm": "3"
+  },
+  "PD": {
+    "xc8": "BANKMASK(RCON), 2, a",
+    "mpasm": "2"
+  },
+  "PDC0": {
+    "xc8": "BANKMASK(PWM1CON), 0, a",
+    "mpasm": "0"
+  },
+  "PDC1": {
+    "xc8": "BANKMASK(PWM1CON), 1, a",
+    "mpasm": "1"
+  },
+  "PDC2": {
+    "xc8": "BANKMASK(PWM1CON), 2, a",
+    "mpasm": "2"
+  },
+  "PDC3": {
+    "xc8": "BANKMASK(PWM1CON), 3, a",
+    "mpasm": "3"
+  },
+  "PDC4": {
+    "xc8": "BANKMASK(PWM1CON), 4, a",
+    "mpasm": "4"
+  },
+  "PDC5": {
+    "xc8": "BANKMASK(PWM1CON), 5, a",
+    "mpasm": "5"
+  },
+  "PDC6": {
+    "xc8": "BANKMASK(PWM1CON), 6, a",
+    "mpasm": "6"
+  },
+  "PEIE": {
+    "xc8": "BANKMASK(INTCON), 6, a",
+    "mpasm": "6"
+  },
+  "PEIE_GIEL": {
+    "xc8": "BANKMASK(INTCON), 6, a",
+    "mpasm": "6"
+  },
+  "PEN": {
+    "xc8": "BANKMASK(SSPCON2), 2, a",
+    "mpasm": "2"
+  },
+  "PGC": {
+    "xc8": "BANKMASK(PORTB), 6, a",
+    "mpasm": "6"
+  },
+  "PGD": {
+    "xc8": "BANKMASK(PORTB), 7, a",
+    "mpasm": "7"
+  },
+  "PGM": {
+    "xc8": "BANKMASK(PORTB), 5, a",
+    "mpasm": "5"
+  },
+  "PLLEN": {
+    "xc8": "BANKMASK(OSCTUNE), 6, a",
+    "mpasm": "6"
+  },
+  "POR": {
+    "xc8": "BANKMASK(RCON), 1, a",
+    "mpasm": "1"
+  },
+  "PRSEN": {
+    "xc8": "BANKMASK(PWM1CON), 7, a",
+    "mpasm": "7"
+  },
+  "PSA": {
+    "xc8": "BANKMASK(T0CON), 3, a",
+    "mpasm": "3"
+  },
+  "PSP0": {
+    "xc8": "BANKMASK(PORTD), 0, a",
+    "mpasm": "0"
+  },
+  "PSP1": {
+    "xc8": "BANKMASK(PORTD), 1, a",
+    "mpasm": "1"
+  },
+  "PSP2": {
+    "xc8": "BANKMASK(PORTD), 2, a",
+    "mpasm": "2"
+  },
+  "PSP3": {
+    "xc8": "BANKMASK(PORTD), 3, a",
+    "mpasm": "3"
+  },
+  "PSP4": {
+    "xc8": "BANKMASK(PORTD), 4, a",
+    "mpasm": "4"
+  },
+  "PSP5": {
+    "xc8": "BANKMASK(PORTD), 5, a",
+    "mpasm": "5"
+  },
+  "PSP6": {
+    "xc8": "BANKMASK(PORTD), 6, a",
+    "mpasm": "6"
+  },
+  "PSP7": {
+    "xc8": "BANKMASK(PORTD), 7, a",
+    "mpasm": "7"
+  },
+  "PSPIE": {
+    "xc8": "BANKMASK(PIE1), 7, a",
+    "mpasm": "7"
+  },
+  "PSPIF": {
+    "xc8": "BANKMASK(PIR1), 7, a",
+    "mpasm": "7"
+  },
+  "PSPIP": {
+    "xc8": "BANKMASK(IPR1), 7, a",
+    "mpasm": "7"
+  },
+  "PSPMODE": {
+    "xc8": "BANKMASK(TRISE), 4, a",
+    "mpasm": "4"
+  },
+  "PSSAC0": {
+    "xc8": "BANKMASK(ECCP1AS), 2, a",
+    "mpasm": "2"
+  },
+  "PSSAC1": {
+    "xc8": "BANKMASK(ECCP1AS), 3, a",
+    "mpasm": "3"
+  },
+  "PSSBD0": {
+    "xc8": "BANKMASK(ECCP1AS), 0, a",
+    "mpasm": "0"
+  },
+  "PSSBD1": {
+    "xc8": "BANKMASK(ECCP1AS), 1, a",
+    "mpasm": "1"
+  },
+  "RA0": {
+    "xc8": "BANKMASK(PORTA), 0, a",
+    "mpasm": "0"
+  },
+  "RA1": {
+    "xc8": "BANKMASK(PORTA), 1, a",
+    "mpasm": "1"
+  },
+  "RA2": {
+    "xc8": "BANKMASK(PORTA), 2, a",
+    "mpasm": "2"
+  },
+  "RA3": {
+    "xc8": "BANKMASK(PORTA), 3, a",
+    "mpasm": "3"
+  },
+  "RA4": {
+    "xc8": "BANKMASK(PORTA), 4, a",
+    "mpasm": "4"
+  },
+  "RA5": {
+    "xc8": "BANKMASK(PORTA), 5, a",
+    "mpasm": "5"
+  },
+  "RA6": {
+    "xc8": "BANKMASK(PORTA), 6, a",
+    "mpasm": "6"
+  },
+  "RA7": {
+    "xc8": "BANKMASK(PORTA), 7, a",
+    "mpasm": "7"
+  },
+  "RB0": {
+    "xc8": "BANKMASK(PORTB), 0, a",
+    "mpasm": "0"
+  },
+  "RB1": {
+    "xc8": "BANKMASK(PORTB), 1, a",
+    "mpasm": "1"
+  },
+  "RB2": {
+    "xc8": "BANKMASK(PORTB), 2, a",
+    "mpasm": "2"
+  },
+  "RB3": {
+    "xc8": "BANKMASK(PORTB), 3, a",
+    "mpasm": "3"
+  },
+  "RB4": {
+    "xc8": "BANKMASK(PORTB), 4, a",
+    "mpasm": "4"
+  },
+  "RB5": {
+    "xc8": "BANKMASK(PORTB), 5, a",
+    "mpasm": "5"
+  },
+  "RB6": {
+    "xc8": "BANKMASK(PORTB), 6, a",
+    "mpasm": "6"
+  },
+  "RB7": {
+    "xc8": "BANKMASK(PORTB), 7, a",
+    "mpasm": "7"
+  },
+  "RBIE": {
+    "xc8": "BANKMASK(INTCON), 3, a",
+    "mpasm": "3"
+  },
+  "RBIF": {
+    "xc8": "BANKMASK(INTCON), 0, a",
+    "mpasm": "0"
+  },
+  "RBIP": {
+    "xc8": "BANKMASK(INTCON2), 0, a",
+    "mpasm": "0"
+  },
+  "RBPU": {
+    "xc8": "BANKMASK(INTCON2), 7, a",
+    "mpasm": "7"
+  },
+  "RC0": {
+    "xc8": "BANKMASK(PORTC), 0, a",
+    "mpasm": "0"
+  },
+  "RC1": {
+    "xc8": "BANKMASK(PORTC), 1, a",
+    "mpasm": "1"
+  },
+  "RC2": {
+    "xc8": "BANKMASK(PORTC), 2, a",
+    "mpasm": "2"
+  },
+  "RC3": {
+    "xc8": "BANKMASK(PORTC), 3, a",
+    "mpasm": "3"
+  },
+  "RC4": {
+    "xc8": "BANKMASK(PORTC), 4, a",
+    "mpasm": "4"
+  },
+  "RC5": {
+    "xc8": "BANKMASK(PORTC), 5, a",
+    "mpasm": "5"
+  },
+  "RC6": {
+    "xc8": "BANKMASK(PORTC), 6, a",
+    "mpasm": "6"
+  },
+  "RC7": {
+    "xc8": "BANKMASK(PORTC), 7, a",
+    "mpasm": "7"
+  },
+  "RCEN": {
+    "xc8": "BANKMASK(SSPCON2), 3, a",
+    "mpasm": "3"
+  },
+  "RCIDL": {
+    "xc8": "BANKMASK(BAUDCON), 6, a",
+    "mpasm": "6"
+  },
+  "RCIE": {
+    "xc8": "BANKMASK(PIE1), 5, a",
+    "mpasm": "5"
+  },
+  "RCIF": {
+    "xc8": "BANKMASK(PIR1), 5, a",
+    "mpasm": "5"
+  },
+  "RCIP": {
+    "xc8": "BANKMASK(IPR1), 5, a",
+    "mpasm": "5"
+  },
+  "RCMT": {
+    "xc8": "BANKMASK(BAUDCON), 6, a",
+    "mpasm": "6"
+  },
+  "RD": {
+    "xc8": "BANKMASK(EECON1), 0, a",
+    "mpasm": "0"
+  },
+  "RD0": {
+    "xc8": "BANKMASK(PORTD), 0, a",
+    "mpasm": "0"
+  },
+  "RD1": {
+    "xc8": "BANKMASK(PORTD), 1, a",
+    "mpasm": "1"
+  },
+  "RD2": {
+    "xc8": "BANKMASK(PORTD), 2, a",
+    "mpasm": "2"
+  },
+  "RD3": {
+    "xc8": "BANKMASK(PORTD), 3, a",
+    "mpasm": "3"
+  },
+  "RD4": {
+    "xc8": "BANKMASK(PORTD), 4, a",
+    "mpasm": "4"
+  },
+  "RD5": {
+    "xc8": "BANKMASK(PORTD), 5, a",
+    "mpasm": "5"
+  },
+  "RD6": {
+    "xc8": "BANKMASK(PORTD), 6, a",
+    "mpasm": "6"
+  },
+  "RD7": {
+    "xc8": "BANKMASK(PORTD), 7, a",
+    "mpasm": "7"
+  },
+  "RE0": {
+    "xc8": "BANKMASK(PORTE), 0, a",
+    "mpasm": "0"
+  },
+  "RE1": {
+    "xc8": "BANKMASK(PORTE), 1, a",
+    "mpasm": "1"
+  },
+  "RE2": {
+    "xc8": "BANKMASK(PORTE), 2, a",
+    "mpasm": "2"
+  },
+  "RE3": {
+    "xc8": "BANKMASK(PORTE), 3, a",
+    "mpasm": "3"
+  },
+  "RI": {
+    "xc8": "BANKMASK(RCON), 4, a",
+    "mpasm": "4"
+  },
+  "RSEN": {
+    "xc8": "BANKMASK(SSPCON2), 1, a",
+    "mpasm": "1"
+  },
+  "RX": {
+    "xc8": "BANKMASK(PORTC), 7, a",
+    "mpasm": "7"
+  },
+  "RX9": {
+    "xc8": "BANKMASK(RCSTA), 6, a",
+    "mpasm": "6"
+  },
+  "RX9D": {
+    "xc8": "BANKMASK(RCSTA), 0, a",
+    "mpasm": "0"
+  },
+  "RXDTP": {
+    "xc8": "BANKMASK(BAUDCON), 5, a",
+    "mpasm": "5"
+  },
+  "R_NOT_W": {
+    "xc8": "BANKMASK(SSPSTAT), 2, a",
+    "mpasm": "2"
+  },
+  "R_W": {
+    "xc8": "BANKMASK(SSPSTAT), 2, a",
+    "mpasm": "2"
+  },
+  "SBOREN": {
+    "xc8": "BANKMASK(RCON), 6, a",
+    "mpasm": "6"
+  },
+  "SCK": {
+    "xc8": "BANKMASK(PORTC), 3, a",
+    "mpasm": "3"
+  },
+  "SCKP": {
+    "xc8": "BANKMASK(BAUDCON), 4, a",
+    "mpasm": "4"
+  },
+  "SCL": {
+    "xc8": "BANKMASK(PORTC), 3, a",
+    "mpasm": "3"
+  },
+  "SCS0": {
+    "xc8": "BANKMASK(OSCCON), 0, a",
+    "mpasm": "0"
+  },
+  "SCS1": {
+    "xc8": "BANKMASK(OSCCON), 1, a",
+    "mpasm": "1"
+  },
+  "SDA": {
+    "xc8": "BANKMASK(PORTC), 4, a",
+    "mpasm": "4"
+  },
+  "SDI": {
+    "xc8": "BANKMASK(PORTC), 4, a",
+    "mpasm": "4"
+  },
+  "SDO": {
+    "xc8": "BANKMASK(PORTC), 5, a",
+    "mpasm": "5"
+  },
+  "SEN": {
+    "xc8": "BANKMASK(SSPCON2), 0, a",
+    "mpasm": "0"
+  },
+  "SENDB": {
+    "xc8": "BANKMASK(TXSTA), 3, a",
+    "mpasm": "3"
+  },
+  "SMP": {
+    "xc8": "BANKMASK(SSPSTAT), 7, a",
+    "mpasm": "7"
+  },
+  "SP0": {
+    "xc8": "BANKMASK(STKPTR), 0, a",
+    "mpasm": "0"
+  },
+  "SP1": {
+    "xc8": "BANKMASK(STKPTR), 1, a",
+    "mpasm": "1"
+  },
+  "SP2": {
+    "xc8": "BANKMASK(STKPTR), 2, a",
+    "mpasm": "2"
+  },
+  "SP3": {
+    "xc8": "BANKMASK(STKPTR), 3, a",
+    "mpasm": "3"
+  },
+  "SP4": {
+    "xc8": "BANKMASK(STKPTR), 4, a",
+    "mpasm": "4"
+  },
+  "SPEN": {
+    "xc8": "BANKMASK(RCSTA), 7, a",
+    "mpasm": "7"
+  },
+  "SREN": {
+    "xc8": "BANKMASK(RCSTA), 5, a",
+    "mpasm": "5"
+  },
+  "SS": {
+    "xc8": "BANKMASK(PORTA), 5, a",
+    "mpasm": "5"
+  },
+  "SSPEN": {
+    "xc8": "BANKMASK(SSPCON1), 5, a",
+    "mpasm": "5"
+  },
+  "SSPIE": {
+    "xc8": "BANKMASK(PIE1), 3, a",
+    "mpasm": "3"
+  },
+  "SSPIF": {
+    "xc8": "BANKMASK(PIR1), 3, a",
+    "mpasm": "3"
+  },
+  "SSPIP": {
+    "xc8": "BANKMASK(IPR1), 3, a",
+    "mpasm": "3"
+  },
+  "SSPM0": {
+    "xc8": "BANKMASK(SSPCON1), 0, a",
+    "mpasm": "0"
+  },
+  "SSPM1": {
+    "xc8": "BANKMASK(SSPCON1), 1, a",
+    "mpasm": "1"
+  },
+  "SSPM2": {
+    "xc8": "BANKMASK(SSPCON1), 2, a",
+    "mpasm": "2"
+  },
+  "SSPM3": {
+    "xc8": "BANKMASK(SSPCON1), 3, a",
+    "mpasm": "3"
+  },
+  "SSPOV": {
+    "xc8": "BANKMASK(SSPCON1), 6, a",
+    "mpasm": "6"
+  },
+  "STKFUL": {
+    "xc8": "BANKMASK(STKPTR), 7, a",
+    "mpasm": "7"
+  },
+  "STKOVF": {
+    "xc8": "BANKMASK(STKPTR), 7, a",
+    "mpasm": "7"
+  },
+  "STKUNF": {
+    "xc8": "BANKMASK(STKPTR), 6, a",
+    "mpasm": "6"
+  },
+  "SWDTE": {
+    "xc8": "BANKMASK(WDTCON), 0, a",
+    "mpasm": "0"
+  },
+  "SWDTEN": {
+    "xc8": "BANKMASK(WDTCON), 0, a",
+    "mpasm": "0"
+  },
+  "SYNC": {
+    "xc8": "BANKMASK(TXSTA), 4, a",
+    "mpasm": "4"
+  },
+  "T016BIT": {
+    "xc8": "BANKMASK(T0CON), 6, a",
+    "mpasm": "6"
+  },
+  "T08BIT": {
+    "xc8": "BANKMASK(T0CON), 6, a",
+    "mpasm": "6"
+  },
+  "T0CKI": {
+    "xc8": "BANKMASK(PORTA), 4, a",
+    "mpasm": "4"
+  },
+  "T0CS": {
+    "xc8": "BANKMASK(T0CON), 5, a",
+    "mpasm": "5"
+  },
+  "T0IE": {
+    "xc8": "BANKMASK(INTCON), 5, a",
+    "mpasm": "5"
+  },
+  "T0IF": {
+    "xc8": "BANKMASK(INTCON), 2, a",
+    "mpasm": "2"
+  },
+  "T0PS0": {
+    "xc8": "BANKMASK(T0CON), 0, a",
+    "mpasm": "0"
+  },
+  "T0PS1": {
+    "xc8": "BANKMASK(T0CON), 1, a",
+    "mpasm": "1"
+  },
+  "T0PS2": {
+    "xc8": "BANKMASK(T0CON), 2, a",
+    "mpasm": "2"
+  },
+  "T0PS3": {
+    "xc8": "BANKMASK(T0CON), 3, a",
+    "mpasm": "3"
+  },
+  "T0SE": {
+    "xc8": "BANKMASK(T0CON), 4, a",
+    "mpasm": "4"
+  },
+  "T13CKI": {
+    "xc8": "BANKMASK(PORTC), 0, a",
+    "mpasm": "0"
+  },
+  "T1CKI": {
+    "xc8": "BANKMASK(PORTC), 0, a",
+    "mpasm": "0"
+  },
+  "T1CKPS0": {
+    "xc8": "BANKMASK(T1CON), 4, a",
+    "mpasm": "4"
+  },
+  "T1CKPS1": {
+    "xc8": "BANKMASK(T1CON), 5, a",
+    "mpasm": "5"
+  },
+  "T1OSCEN": {
+    "xc8": "BANKMASK(T1CON), 3, a",
+    "mpasm": "3"
+  },
+  "T1OSI": {
+    "xc8": "BANKMASK(PORTC), 1, a",
+    "mpasm": "1"
+  },
+  "T1OSO": {
+    "xc8": "BANKMASK(PORTC), 0, a",
+    "mpasm": "0"
+  },
+  "T1RUN": {
+    "xc8": "BANKMASK(T1CON), 6, a",
+    "mpasm": "6"
+  },
+  "T1SYNC": {
+    "xc8": "BANKMASK(T1CON), 2, a",
+    "mpasm": "2"
+  },
+  "T2CKPS0": {
+    "xc8": "BANKMASK(T2CON), 0, a",
+    "mpasm": "0"
+  },
+  "T2CKPS1": {
+    "xc8": "BANKMASK(T2CON), 1, a",
+    "mpasm": "1"
+  },
+  "T2OUTPS0": {
+    "xc8": "BANKMASK(T2CON), 3, a",
+    "mpasm": "3"
+  },
+  "T2OUTPS1": {
+    "xc8": "BANKMASK(T2CON), 4, a",
+    "mpasm": "4"
+  },
+  "T2OUTPS2": {
+    "xc8": "BANKMASK(T2CON), 5, a",
+    "mpasm": "5"
+  },
+  "T2OUTPS3": {
+    "xc8": "BANKMASK(T2CON), 6, a",
+    "mpasm": "6"
+  },
+  "T3CCP1": {
+    "xc8": "BANKMASK(T3CON), 3, a",
+    "mpasm": "3"
+  },
+  "T3CCP2": {
+    "xc8": "BANKMASK(T3CON), 6, a",
+    "mpasm": "6"
+  },
+  "T3CKPS0": {
+    "xc8": "BANKMASK(T3CON), 4, a",
+    "mpasm": "4"
+  },
+  "T3CKPS1": {
+    "xc8": "BANKMASK(T3CON), 5, a",
+    "mpasm": "5"
+  },
+  "T3SYNC": {
+    "xc8": "BANKMASK(T3CON), 2, a",
+    "mpasm": "2"
+  },
+  "TMR0IE": {
+    "xc8": "BANKMASK(INTCON), 5, a",
+    "mpasm": "5"
+  },
+  "TMR0IF": {
+    "xc8": "BANKMASK(INTCON), 2, a",
+    "mpasm": "2"
+  },
+  "TMR0IP": {
+    "xc8": "BANKMASK(INTCON2), 2, a",
+    "mpasm": "2"
+  },
+  "TMR0ON": {
+    "xc8": "BANKMASK(T0CON), 7, a",
+    "mpasm": "7"
+  },
+  "TMR1CS": {
+    "xc8": "BANKMASK(T1CON), 1, a",
+    "mpasm": "1"
+  },
+  "TMR1IE": {
+    "xc8": "BANKMASK(PIE1), 0, a",
+    "mpasm": "0"
+  },
+  "TMR1IF": {
+    "xc8": "BANKMASK(PIR1), 0, a",
+    "mpasm": "0"
+  },
+  "TMR1IP": {
+    "xc8": "BANKMASK(IPR1), 0, a",
+    "mpasm": "0"
+  },
+  "TMR1ON": {
+    "xc8": "BANKMASK(T1CON), 0, a",
+    "mpasm": "0"
+  },
+  "TMR2IE": {
+    "xc8": "BANKMASK(PIE1), 1, a",
+    "mpasm": "1"
+  },
+  "TMR2IF": {
+    "xc8": "BANKMASK(PIR1), 1, a",
+    "mpasm": "1"
+  },
+  "TMR2IP": {
+    "xc8": "BANKMASK(IPR1), 1, a",
+    "mpasm": "1"
+  },
+  "TMR2ON": {
+    "xc8": "BANKMASK(T2CON), 2, a",
+    "mpasm": "2"
+  },
+  "TMR3CS": {
+    "xc8": "BANKMASK(T3CON), 1, a",
+    "mpasm": "1"
+  },
+  "TMR3IE": {
+    "xc8": "BANKMASK(PIE2), 1, a",
+    "mpasm": "1"
+  },
+  "TMR3IF": {
+    "xc8": "BANKMASK(PIR2), 1, a",
+    "mpasm": "1"
+  },
+  "TMR3IP": {
+    "xc8": "BANKMASK(IPR2), 1, a",
+    "mpasm": "1"
+  },
+  "TMR3ON": {
+    "xc8": "BANKMASK(T3CON), 0, a",
+    "mpasm": "0"
+  },
+  "TO": {
+    "xc8": "BANKMASK(RCON), 3, a",
+    "mpasm": "3"
+  },
+  "TOUTPS0": {
+    "xc8": "BANKMASK(T2CON), 3, a",
+    "mpasm": "3"
+  },
+  "TOUTPS1": {
+    "xc8": "BANKMASK(T2CON), 4, a",
+    "mpasm": "4"
+  },
+  "TOUTPS2": {
+    "xc8": "BANKMASK(T2CON), 5, a",
+    "mpasm": "5"
+  },
+  "TOUTPS3": {
+    "xc8": "BANKMASK(T2CON), 6, a",
+    "mpasm": "6"
+  },
+  "TRISA0": {
+    "xc8": "BANKMASK(TRISA), 0, a",
+    "mpasm": "0"
+  },
+  "TRISA1": {
+    "xc8": "BANKMASK(TRISA), 1, a",
+    "mpasm": "1"
+  },
+  "TRISA2": {
+    "xc8": "BANKMASK(TRISA), 2, a",
+    "mpasm": "2"
+  },
+  "TRISA3": {
+    "xc8": "BANKMASK(TRISA), 3, a",
+    "mpasm": "3"
+  },
+  "TRISA4": {
+    "xc8": "BANKMASK(TRISA), 4, a",
+    "mpasm": "4"
+  },
+  "TRISA5": {
+    "xc8": "BANKMASK(TRISA), 5, a",
+    "mpasm": "5"
+  },
+  "TRISA6": {
+    "xc8": "BANKMASK(TRISA), 6, a",
+    "mpasm": "6"
+  },
+  "TRISA7": {
+    "xc8": "BANKMASK(TRISA), 7, a",
+    "mpasm": "7"
+  },
+  "TRISB0": {
+    "xc8": "BANKMASK(TRISB), 0, a",
+    "mpasm": "0"
+  },
+  "TRISB1": {
+    "xc8": "BANKMASK(TRISB), 1, a",
+    "mpasm": "1"
+  },
+  "TRISB2": {
+    "xc8": "BANKMASK(TRISB), 2, a",
+    "mpasm": "2"
+  },
+  "TRISB3": {
+    "xc8": "BANKMASK(TRISB), 3, a",
+    "mpasm": "3"
+  },
+  "TRISB4": {
+    "xc8": "BANKMASK(TRISB), 4, a",
+    "mpasm": "4"
+  },
+  "TRISB5": {
+    "xc8": "BANKMASK(TRISB), 5, a",
+    "mpasm": "5"
+  },
+  "TRISB6": {
+    "xc8": "BANKMASK(TRISB), 6, a",
+    "mpasm": "6"
+  },
+  "TRISB7": {
+    "xc8": "BANKMASK(TRISB), 7, a",
+    "mpasm": "7"
+  },
+  "TRISC0": {
+    "xc8": "BANKMASK(TRISC), 0, a",
+    "mpasm": "0"
+  },
+  "TRISC1": {
+    "xc8": "BANKMASK(TRISC), 1, a",
+    "mpasm": "1"
+  },
+  "TRISC2": {
+    "xc8": "BANKMASK(TRISC), 2, a",
+    "mpasm": "2"
+  },
+  "TRISC3": {
+    "xc8": "BANKMASK(TRISC), 3, a",
+    "mpasm": "3"
+  },
+  "TRISC4": {
+    "xc8": "BANKMASK(TRISC), 4, a",
+    "mpasm": "4"
+  },
+  "TRISC5": {
+    "xc8": "BANKMASK(TRISC), 5, a",
+    "mpasm": "5"
+  },
+  "TRISC6": {
+    "xc8": "BANKMASK(TRISC), 6, a",
+    "mpasm": "6"
+  },
+  "TRISC7": {
+    "xc8": "BANKMASK(TRISC), 7, a",
+    "mpasm": "7"
+  },
+  "TRISD0": {
+    "xc8": "BANKMASK(TRISD), 0, a",
+    "mpasm": "0"
+  },
+  "TRISD1": {
+    "xc8": "BANKMASK(TRISD), 1, a",
+    "mpasm": "1"
+  },
+  "TRISD2": {
+    "xc8": "BANKMASK(TRISD), 2, a",
+    "mpasm": "2"
+  },
+  "TRISD3": {
+    "xc8": "BANKMASK(TRISD), 3, a",
+    "mpasm": "3"
+  },
+  "TRISD4": {
+    "xc8": "BANKMASK(TRISD), 4, a",
+    "mpasm": "4"
+  },
+  "TRISD5": {
+    "xc8": "BANKMASK(TRISD), 5, a",
+    "mpasm": "5"
+  },
+  "TRISD6": {
+    "xc8": "BANKMASK(TRISD), 6, a",
+    "mpasm": "6"
+  },
+  "TRISD7": {
+    "xc8": "BANKMASK(TRISD), 7, a",
+    "mpasm": "7"
+  },
+  "TRISE0": {
+    "xc8": "BANKMASK(TRISE), 0, a",
+    "mpasm": "0"
+  },
+  "TRISE1": {
+    "xc8": "BANKMASK(TRISE), 1, a",
+    "mpasm": "1"
+  },
+  "TRISE2": {
+    "xc8": "BANKMASK(TRISE), 2, a",
+    "mpasm": "2"
+  },
+  "TRMT": {
+    "xc8": "BANKMASK(TXSTA), 1, a",
+    "mpasm": "1"
+  },
+  "TUN0": {
+    "xc8": "BANKMASK(OSCTUNE), 0, a",
+    "mpasm": "0"
+  },
+  "TUN1": {
+    "xc8": "BANKMASK(OSCTUNE), 1, a",
+    "mpasm": "1"
+  },
+  "TUN2": {
+    "xc8": "BANKMASK(OSCTUNE), 2, a",
+    "mpasm": "2"
+  },
+  "TUN3": {
+    "xc8": "BANKMASK(OSCTUNE), 3, a",
+    "mpasm": "3"
+  },
+  "TUN4": {
+    "xc8": "BANKMASK(OSCTUNE), 4, a",
+    "mpasm": "4"
+  },
+  "TX": {
+    "xc8": "BANKMASK(PORTC), 6, a",
+    "mpasm": "6"
+  },
+  "TX9": {
+    "xc8": "BANKMASK(TXSTA), 6, a",
+    "mpasm": "6"
+  },
+  "TX9D": {
+    "xc8": "BANKMASK(TXSTA), 0, a",
+    "mpasm": "0"
+  },
+  "TXCKP": {
+    "xc8": "BANKMASK(BAUDCON), 4, a",
+    "mpasm": "4"
+  },
+  "TXEN": {
+    "xc8": "BANKMASK(TXSTA), 5, a",
+    "mpasm": "5"
+  },
+  "TXIE": {
+    "xc8": "BANKMASK(PIE1), 4, a",
+    "mpasm": "4"
+  },
+  "TXIF": {
+    "xc8": "BANKMASK(PIR1), 4, a",
+    "mpasm": "4"
+  },
+  "TXIP": {
+    "xc8": "BANKMASK(IPR1), 4, a",
+    "mpasm": "4"
+  },
+  "UA": {
+    "xc8": "BANKMASK(SSPSTAT), 1, a",
+    "mpasm": "1"
+  },
+  "VCFG0": {
+    "xc8": "BANKMASK(ADCON1), 4, a",
+    "mpasm": "4"
+  },
+  "VCFG1": {
+    "xc8": "BANKMASK(ADCON1), 5, a",
+    "mpasm": "5"
+  },
+  "VDIRMAG": {
+    "xc8": "BANKMASK(HLVDCON), 7, a",
+    "mpasm": "7"
+  },
+  "VPP": {
+    "xc8": "BANKMASK(PORTE), 3, a",
+    "mpasm": "3"
+  },
+  "VREFN": {
+    "xc8": "BANKMASK(PORTA), 2, a",
+    "mpasm": "2"
+  },
+  "VREFP": {
+    "xc8": "BANKMASK(PORTA), 3, a",
+    "mpasm": "3"
+  },
+  "WCOL": {
+    "xc8": "BANKMASK(SSPCON1), 7, a",
+    "mpasm": "7"
+  },
+  "WR": {
+    "xc8": "BANKMASK(EECON1), 1, a",
+    "mpasm": "1"
+  },
+  "WREN": {
+    "xc8": "BANKMASK(EECON1), 2, a",
+    "mpasm": "2"
+  },
+  "WRERR": {
+    "xc8": "BANKMASK(EECON1), 3, a",
+    "mpasm": "3"
+  },
+  "WUE": {
+    "xc8": "BANKMASK(BAUDCON), 1, a",
+    "mpasm": "1"
+  }
+}

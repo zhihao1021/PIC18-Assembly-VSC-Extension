@@ -1,0 +1,66 @@
+{
+  "name": "pic18-assembly-language",
+  "displayName": "PIC18 Assembly Language",
+  "description": "Language support for PIC18 assembly",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "license": "MIT",
+  "publisher": "zhihao1021",
+  "author": {
+    "name": "Chih-Hao Chuang",
+    "email": "contact@chih-hao.xyz"
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension"
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "scripts": {
+    "vscode:prepublish": "npm run bundle",
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "bundle": "node ./scripts/build.js"
+  },
+  "devDependencies": {
+    "@types/node": "24.8.1",
+    "@types/vscode": "1.105.0",
+    "esbuild": "0.25.11",
+    "esbuild-plugin-alias": "0.2.1",
+    "typescript": "^5.9.3",
+    "vsce": "^2.9.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "asm",
+        "aliases": [
+          "PIC18 assembly",
+          "asm"
+        ],
+        "extensions": [
+          ".asm",
+          ".s",
+          ".as",
+          ".inc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "asm",
+        "scopeName": "source.picasm",
+        "path": "./syntaxes/asm.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "lru-cache": "^11.2.2"
+  }
+}
