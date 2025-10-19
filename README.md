@@ -44,7 +44,7 @@ Provides basic PIC18 assembly language support for Visual Studio Code.
 - 支援 Macro 定義 (Support Macro definitions)
 
 ## 功能演示 (Demo)
-![Demo](https://raw.githubusercontent.com/zhihao1021/PIC18-Assembly-VSC-Extension/refs/heads/main/resources/pic18-assembly.gif)
+![Demo](https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension/blob/main/resources/pic18-assembly.gif?raw=true)
 
 ## 更新日誌 (Changelog)
 #### 2025-10-19
