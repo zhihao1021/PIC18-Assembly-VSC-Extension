@@ -2,9 +2,9 @@
   "name": "pic18-assembly-language",
   "displayName": "PIC18 Assembly Language",
   "description": "Language support for PIC18 assembly",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
-    "vscode": "^1.105.0"
+    "vscode": "^1.90.0"
   },
   "license": "MIT",
   "publisher": "zhihao1021",
@@ -14,18 +14,21 @@
   },
   "repository": {
     "type": "git",
-    "uri": "https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension"
+    "url": "https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension"
   },
+  "bugs": {
+    "url": "https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension/issues"
+  },
+  "homepage": "https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension",
   "main": "./out/extension.js",
   "activationEvents": [],
   "files": [
     "out/**",
     "syntaxes/**",
     "language-configuration.json",
-    "README.md",
+    "README.extension.md",
     "LICENSE"
   ],
-  "homepage": "README.vs.md",
   "scripts": {
     "vscode:prepublish": "npm run bundle",
     "compile": "tsc -p .",
@@ -34,7 +37,7 @@
   },
   "devDependencies": {
     "@types/node": "24.8.1",
-    "@types/vscode": "1.105.0",
+    "@types/vscode": "1.90.0",
     "esbuild": "0.25.11",
     "esbuild-plugin-alias": "0.2.1",
     "typescript": "^5.9.3"
