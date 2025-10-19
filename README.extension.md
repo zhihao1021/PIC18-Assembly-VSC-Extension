@@ -3,8 +3,6 @@
 
 Provides basic PIC18 assembly language support for Visual Studio Code.
 
-![](./resources/pic18-assembly.gif)
-
 ## 目錄 (Contents)
 - [特色 (Features)](#特色-features)
 - [已知問題 (Known Issues)](#已知問題-known-issues)

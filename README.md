@@ -3,6 +3,8 @@
 
 Provides basic PIC18 assembly language support for Visual Studio Code.
 
+![](./resources/pic18-assembly.gif)
+
 ## 如何安裝
 既然你都已經打開 Github 了，能不能順便幫我點一下右上角的星星 :face_holding_back_tears:
 
