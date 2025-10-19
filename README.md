@@ -10,6 +10,11 @@ Provides basic PIC18 assembly language support for Visual Studio Code.
 
 ![](./resources/github_star.png)
 
+### 注意事項
+這個擴充功能並不包含編譯及偵錯功能，僅提供語法高亮、指令說明、標籤與變數的自動補全等功能。
+
+你可以在 VSCode 中編輯完後，在使用 MPLAB X IDE 或其他工具來編譯與偵錯你的程式碼。
+
 ### 從 Visual Studio Code 市集安裝
 1. 開啟 Visual Studio Code
 2. 點選左側的 Extensions 圖示
