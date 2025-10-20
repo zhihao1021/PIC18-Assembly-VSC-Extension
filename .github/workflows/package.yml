@@ -44,7 +44,7 @@ jobs:
         run: pnpm install -g @vscode/vsce
 
       - name: Package with vsce
-        run: vsce package --readme-path README.extension.md
+        run: vsce package --readme-path README.extension.md --no-dependencies
 
       - name: Get version from tag
         id: tag_name

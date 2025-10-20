@@ -32,7 +32,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "vscode:prepublish": "pnpm run bundle",
+    "vscode:prepublish": "npm run bundle",
     "compile": "tsc -p .",
     "watch": "tsc -watch -p .",
     "bundle": "node ./scripts/build.js"
