@@ -4,6 +4,8 @@ import { getFileId } from "@/utils/getFileId";
 
 import { macroManager } from "./data";
 import { macroToDocumentation } from "./documentation";
+import { MacroResourceType } from "./types/macro";
+import { variableToDocumentation } from "../variable/documentation";
 
 export function getMacroCompletions(document: TextDocument): CompletionItem[] {
     const fileUri = getFileId(document.uri);
@@ -24,4 +26,19 @@ export function getMacroCompletions(document: TextDocument): CompletionItem[] {
     });
 
     return results;
+}
+
+export function getMacroParamsCompletions(macro: MacroResourceType): CompletionItem[] {
+    const { value: { name, parameters } } = macro;
+    return [...parameters.values()].flat().map(variable => {
+        const { value: { name } } = variable;
+
+        const item = new CompletionItem(name, CompletionItemKind.Variable);
+
+        item.insertText = name;
+        item.detail = `(macro parameter) of \`${name}\``;
+        item.documentation = variableToDocumentation(variable, macro);
+
+        return item;
+    });
 }

@@ -24,6 +24,24 @@ description when links are shared are language-appropriate
 - Trademark sign previously shown after the project description in version 
 0.3.0 -->
 
+## [0.1.8] - 2025-10-21
+
+### Added
+
+- Support use macro parameters as branch labels.
+
+### Fixed
+
+- N/A
+
+### Changed
+
+- N/A
+
+### Removed
+
+- N/A
+
 ## [0.1.7] - 2025-10-21
 
 ### Added

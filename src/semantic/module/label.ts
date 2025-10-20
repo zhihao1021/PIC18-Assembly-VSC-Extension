@@ -6,8 +6,8 @@ import { getFileId } from "@/utils/getFileId";
 export function getLabelRanges(document: TextDocument): Range[] {
     const fileUri = getFileId(document.uri);
 
-    const branchLabelRanges = labelManager.branchLabelFileMapData.get(fileUri)?.filter(
-        l => !l.value.missing
+    const branchLabelRanges = [...labelManager.branchLabelFileMapData.get(fileUri)?.values() ?? []].flat().filter(
+        l => !l.value.missing || l.value.macro
     ).map(l => l.range) ?? [];
     const externalLabelRanges = labelManager.fileMapData.get(fileUri)?.filter(
         l => l.value.isExternal && l.value.exists

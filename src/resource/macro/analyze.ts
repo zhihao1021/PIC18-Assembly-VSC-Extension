@@ -13,6 +13,8 @@ import { VariableDefineData, VariableDefineResource } from "../variable/types/va
 import { macroManager } from "./data";
 import { updateMacroDiagnostics } from "./diagnostic";
 import { MacroData, MacroResource, MacroResourceType } from "./types/macro";
+import { labelBehindBranchRegex } from "../label/analyze";
+import { labelManager } from "../label/data";
 
 export const macroUsageRegex = /(?<=^[ \t]*)((?:[A-Za-z_\?][\dA-Za-z_\?\$]*)(?:$|[ \t]+)(?!\bMACRO\b))(?:[ \t]*$|([^\n]*))/gmi;
 
@@ -100,7 +102,7 @@ function matchMacro<T extends BaseVariableDataType, U extends ResourceDataType<T
 }
 
 export function analyzeMacrosOfDocument(document: TextDocument): void {
-    // Must be run after variable analysis
+    // Must be run after variable and label analysis
     const fileUri = getFileId(document.uri);
     const text = document.getText();
 
@@ -138,6 +140,21 @@ export function analyzeMacrosOfDocument(document: TextDocument): void {
                         if (!macroRange.contains(varData.position)) return;
 
                         varData.value.macro = result;
+                    });
+                });
+            }
+
+            const currentFileLabelsMap = labelManager.branchLabelFileMapData.get(fileUri);
+            if (currentFileLabelsMap) {
+                [...fullMacroText.matchAll(labelBehindBranchRegex)].forEach(labelMatch => {
+                    const labelName = labelMatch[1];
+                    if (!macroParamsTextList.includes(labelName)) return;
+                    if (!currentFileLabelsMap.has(labelName)) return;
+
+                    currentFileLabelsMap.get(labelName)!.forEach(labelData => {
+                        if (!macroRange.contains(labelData.position)) return;
+
+                        labelData.value.macro = result;
                     });
                 });
             }

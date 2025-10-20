@@ -8,7 +8,7 @@ import { BranchLabelResourceType } from "./types/branchLabel";
 class DataManager {
     private _fileMapData: Map<string, LabelResourceType[]>;
     private _labelNameMapData: Map<string, LabelResourceType[]>;
-    private _branchLabelFileMapData: Map<string, BranchLabelResourceType[]>;
+    private _branchLabelFileMapData: Map<string, Map<string, BranchLabelResourceType[]>>;
 
     get fileMapData(): Map<string, LabelResourceType[]> {
         return this._fileMapData;
@@ -18,7 +18,7 @@ class DataManager {
         return this._labelNameMapData;
     }
 
-    get branchLabelFileMapData(): Map<string, BranchLabelResourceType[]> {
+    get branchLabelFileMapData(): Map<string, Map<string, BranchLabelResourceType[]>> {
         return this._branchLabelFileMapData;
     }
 
@@ -116,7 +116,14 @@ class DataManager {
 
     public setBranchLabelsOfUri(uri: Uri, labels: BranchLabelResourceType[]): void {
         const fileUri = getFileId(uri);
-        this._branchLabelFileMapData.set(fileUri, labels);
+        const labelsMap: Map<string, BranchLabelResourceType[]> = new Map();
+        labels.forEach(label => {
+            const labelName = label.value.name;
+            const labelList = labelsMap.get(labelName) ?? labelsMap.set(labelName, []).get(labelName)!;
+            labelList.push(label);
+        });
+
+        this._branchLabelFileMapData.set(fileUri, labelsMap);
     }
 
     public removeLabelsOfUri(uri: Uri): void {

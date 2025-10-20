@@ -53,12 +53,19 @@ export function updateLabelDiagnostics(): void {
         }
     });
 
-    labelManager.branchLabelFileMapData.forEach(labels => labels.forEach(({
+    labelManager.branchLabelFileMapData.forEach(labels => [...labels.values()].flat().forEach(({
         uri,
         range,
-        value: { name, missing }
+        value: { name, missing, macro }
     }) => {
-        if (!missing) return;
+        if (!missing && macro) {
+            pushDiagnostic(uri, new Diagnostic(
+                range, `The label '${name}' in macro '${macro.value.name}' parameters also defined as a branch label may cause unexpected behavior.`,
+                DiagnosticSeverity.Warning
+            ));
+            return;
+        }
+        if (!missing || macro) return;
 
         pushDiagnostic(uri, new Diagnostic(
             range, `Unknow branch label '${name}'`,

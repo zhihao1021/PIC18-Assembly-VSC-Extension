@@ -5,6 +5,7 @@ import { variableManager } from "./data";
 import { includeManager } from "../include/data";
 import { macroManager } from "../macro/data";
 import { variableToDocumentation } from "./documentation";
+import { getMacroParamsCompletions } from "../macro/completion";
 
 export function getVariableCompletions(document: TextDocument, position: Position): CompletionItem[] {
     const fileUri = getFileId(document.uri);
@@ -30,20 +31,10 @@ export function getVariableCompletions(document: TextDocument, position: Positio
     const macros = macroManager.fileMapMacroData.get(fileUri);
     if (macros) {
         macros.forEach(macro => {
-            const { range, value: { name: macroName, parameters } } = macro;
+            const { range } = macro;
             if (!range.contains(position)) return;
 
-            [...parameters.values()].flat().forEach(variable => {
-                const { value: { name } } = variable;
-
-                const item = new CompletionItem(name, CompletionItemKind.Variable);
-
-                item.insertText = name;
-                item.detail = `(macro parameter) of \`${macroName}\``;
-                item.documentation = variableToDocumentation(variable, macro);
-
-                includedVariables.push(item);
-            });
+            getMacroParamsCompletions(macro).forEach(item => includedVariables.push(item));
         });
     }
 

@@ -28,7 +28,14 @@ export class CustomDefinitionProvider implements DefinitionProvider {
 
         const locations: Location[] = [];
 
-        checkLabelDefinition(word, lineText, startIndex, locations);
+        checkLabelDefinition(
+            word,
+            lineText,
+            startIndex,
+            document,
+            position,
+            locations
+        );
         if (locations.length > 0) return locations;
 
         checkMacroDefinition(word, lineText, startIndex, document, locations);
