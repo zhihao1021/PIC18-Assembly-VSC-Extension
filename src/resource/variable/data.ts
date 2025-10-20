@@ -36,10 +36,18 @@ class DataManager {
     }
 
     public setDefineVariablesOfUri(uri: Uri, variables: VariableDefineResourceType[]): void {
+        const fileUri = getFileId(uri);
+
         if (variables.length === 0) {
             this.removeDefineVariablesOfUri(uri);
             return;
         }
+
+        const variableNameList = variables.map(v => v.value.name);
+        this._fileMapDefineData.get(fileUri)?.forEach((_, name) => {
+            if (variableNameList.includes(name)) return;
+            this._fileMapDefineData.get(fileUri)!.delete(name);
+        });
 
         variables.forEach(variable => this.push(variable));
     }

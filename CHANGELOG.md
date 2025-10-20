@@ -24,9 +24,28 @@ description when links are shared are language-appropriate
 - Trademark sign previously shown after the project description in version 
 0.3.0 -->
 
+## [0.1.5] - 2025-10-20
+
+### Added
+
+- N/A
+
+### Fixed
+
+- Fix variable still exists after removing all variable definitions in a file.
+
+### Changed
+
+- N/A
+
+### Removed
+
+- N/A
+
 ## [0.1.4] - 2025-10-20
 
 ### Added
+
 - Add CHANGELOG.md file to the package files.
 
 ### Fixed

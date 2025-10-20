@@ -8,7 +8,6 @@ Provides basic PIC18 assembly language support for Visual Studio Code.
 - [已知問題 (Known Issues)](#已知問題-known-issues)
 - [代辦事項](#代辦事項-todo)
 - [功能演示 (Demo)](#功能演示-demo)
-- [更新日誌 (Changelog)](#更新日誌-changelog)
 
 ## 特色 (Features)
 - 片段範本 Snippets
