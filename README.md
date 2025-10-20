@@ -1,4 +1,6 @@
 # PIC18 Assembly Language Extension
+[![Build](https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension/actions/workflows/package.yml/badge.svg)](https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension/actions/workflows/package.yml)
+
 為 Visual Studio Code 提供簡易的 PIC18 系列組合語言支持。
 
 Provides basic PIC18 assembly language support for Visual Studio Code.
