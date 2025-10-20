@@ -20,8 +20,8 @@ export function updateVariableDiagnostics(): void {
         });
     }
 
-    variableManager.fileMapUsageData.forEach(variables => variables.forEach(({ uri, range, value: { name, exists } }) => {
-        if (exists) return;
+    variableManager.fileMapUsageData.forEach(variables => Array.from(variables.values()).flat().forEach(({ uri, range, value: { name, exists, macro } }) => {
+        if (exists || macro) return;
 
         pushDiagnostic(uri, new Diagnostic(
             range, `Undefined variable '${name}'`,

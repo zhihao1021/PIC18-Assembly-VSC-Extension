@@ -1,0 +1,37 @@
+{
+    "PIC18 Program Template": {
+        "scope": "asm",
+        "prefix": "pic18-startup",
+        "body": [
+            "#include <p18f4520.inc>",
+            "\tLIST P=18F4520",
+            "\tCONFIG OSC = HS",
+            "\tCONFIG WDT = OFF",
+            "",
+            "REST_VECT: CODE 0x0000",
+            "\tGOTO\tmain",
+            "main:",
+            "\t$0",
+            "",
+            "\tEND"
+        ],
+        "description": "Basic PIC18 program template (LIST, CONFIG, reset vector, MAIN label)"
+    },
+    "PIC18 Macros": {
+        "scpoe": "asm",
+        "prefix": "MACRO",
+        "body": [
+            "MACRO",
+            "\t$0",
+            "ENDM"
+        ]
+    },
+    "Include Directive": {
+        "scope": "asm",
+        "prefix": "#include",
+        "body": [
+            "#include \"$1\""
+        ],
+        "description": "Include directive for including other assembly files"
+    }
+}

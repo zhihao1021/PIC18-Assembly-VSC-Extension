@@ -14,17 +14,17 @@ import {
     Uri,
 } from "vscode";
 
-import { scheduleWork } from "@/utils/scheduleWork";
-
 import { getLabelRanges } from "./module/label";
 import { getVariableRanges } from "./module/variable";
 import { getFileId } from "@/utils/getFileId";
 import { LRUCache } from "lru-cache";
+import { getMacroRanges } from "./module/macro";
 
-type DispatcherType = "label" | "variable";
+type DispatcherType = "label" | "variable" | "macro";
 const dispatcherTypeMap: { [key in DispatcherType]: string } = {
     label: "function",
     variable: "variable",
+    macro: "class",
 };
 const allDispatchers = new Set(Object.keys(dispatcherTypeMap) as DispatcherType[]);
 
@@ -33,6 +33,7 @@ const cachedResources: LRUCache<string, Map<DispatcherType, [Range, string][]>> 
 const funcMap: { [key in DispatcherType]: (document: TextDocument) => Range[] } = {
     label: getLabelRanges,
     variable: getVariableRanges,
+    macro: getMacroRanges,
 };
 
 export class CustomSemanticProvider implements DocumentSemanticTokensProvider {
@@ -87,7 +88,7 @@ export class CustomSemanticProvider implements DocumentSemanticTokensProvider {
     }
 }
 
-const legend = new SemanticTokensLegend(["function", "variable"], []);
+const legend = new SemanticTokensLegend(["function", "variable", "class"], []);
 const provider = new CustomSemanticProvider();
 
 export function initSemanticProvider(context: ExtensionContext) {

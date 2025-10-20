@@ -86,7 +86,7 @@ export const PIC_INSTRUCTIONS: PicInstruction[] = [
 ]
 
 export const PIC_INSTRUCTIONS_COMPLETIONS = PIC_INSTRUCTIONS.map(({ label, detail }) => {
-    const ci = new CompletionItem(label, CompletionItemKind.Snippet);
+    const ci = new CompletionItem(label, CompletionItemKind.Enum);
     ci.detail = detail;
     ci.insertText = label.startsWith("TBL") ? label : label + " ".repeat(8 - label.length);
 

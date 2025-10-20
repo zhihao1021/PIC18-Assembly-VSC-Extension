@@ -1,4 +1,4 @@
-import { Uri } from "vscode";
+import { TextDocument, Uri } from "vscode";
 
 import { getFileId } from "@/utils/getFileId";
 
@@ -7,7 +7,8 @@ import { IncludeDataType, IncludeResourceType } from "./types/include";
 class DataManager {
     private _fileMapData: Map<string, IncludeResourceType>;
     private _recursiveIncludeMapData: Map<string, Set<string>>;
-    private _referencesCallbacks: Set<(uri: Uri) => void>;
+    private _referencesCallbacks: Set<(uri: Uri, document: TextDocument | null) => void>;
+    private _documentCache: TextDocument | null;
 
     get fileMapData(): Map<string, IncludeResourceType> {
         return this._fileMapData;
@@ -17,10 +18,15 @@ class DataManager {
         return this._recursiveIncludeMapData;
     }
 
+    set documentCache(document: TextDocument) {
+        this._documentCache = document;
+    }
+
     constructor() {
         this._fileMapData = new Map();
         this._recursiveIncludeMapData = new Map();
         this._referencesCallbacks = new Set();
+        this._documentCache = null;
     }
 
     private referenceRefresh(modifyInclude: IncludeResourceType): void {
@@ -34,11 +40,11 @@ class DataManager {
         }
 
         uris.forEach(uri => this._referencesCallbacks.forEach(
-            callback => callback(uri)
+            callback => callback(uri, this.documentCache)
         ));
     }
 
-    public addReferencesRefreshCallback(callback: (uri: Uri) => void): void {
+    public addReferencesRefreshCallback(callback: (uri: Uri, document: TextDocument | null) => void): void {
         this._referencesCallbacks.add(callback);
     }
 

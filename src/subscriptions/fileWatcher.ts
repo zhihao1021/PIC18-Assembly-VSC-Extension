@@ -20,6 +20,8 @@ import { analyzeIncludesOfDocument, analyzeIncludesOfWorkspace, removeIncludesOf
 import { analyzeVariablesOfDocument, analyzeVariablesOfWorkspace, removeVariablesOfDocument } from "@/resource/variable/analyze";
 import { includeManager } from "@/resource/include/data";
 import { variableManager } from "@/resource/variable/data";
+import { analyzeMacrosOfWorkspace, analyzeMacrosOfDocument, removeMacrosOfDocument, analyzeMacrosUsageOfDocument } from "@/resource/macro/analyze";
+import { macroManager } from "@/resource/macro/data";
 
 
 export function initFileSystemWatcher(context: ExtensionContext) {
@@ -37,10 +39,16 @@ export function initFileSystemWatcher(context: ExtensionContext) {
             analyzeLabelsOfWorkspace(documents);
             analyzeIncludesOfWorkspace(documents);
             analyzeVariablesOfWorkspace(documents);
+            analyzeMacrosOfWorkspace(documents);
 
-            includeManager.addReferencesRefreshCallback(uri => {
+            includeManager.addReferencesRefreshCallback((uri, document) => {
                 variableManager.refreshUsageVariablesExistsOfUri(uri);
-            })
+                macroManager.refreshIncludeMacrosOfUri(uri);
+
+                if (document) {
+                    analyzeMacrosUsageOfDocument(document);
+                }
+            });
         }, 200);
 
     }
@@ -55,12 +63,15 @@ export function initFileSystemWatcher(context: ExtensionContext) {
         analyzeLabelsOfDocument(doc);
         analyzeIncludesOfDocument(doc);
         analyzeVariablesOfDocument(doc);
+        analyzeMacrosOfDocument(doc);
+        analyzeMacrosUsageOfDocument(doc);
     }
     watcher.onDidChange(updateFunc);
     watcher.onDidDelete(uri => {
         removeLabelsOfDocument(uri);
         removeIncludesOfDocument(uri);
         removeVariablesOfDocument(uri);
+        removeMacrosOfDocument(uri);
 
         resetCompletionCache();
 
@@ -69,7 +80,3 @@ export function initFileSystemWatcher(context: ExtensionContext) {
 
     subscriptions.push(watcher);
 }
-// function scheduleIndexWorkspaceIncludes(documents: TextDocument[], arg1: number, arg2: () => Promise<void>) {
-//     throw new Error("Function not implemented.");
-// }
-

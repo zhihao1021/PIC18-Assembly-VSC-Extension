@@ -1,9 +1,74 @@
-# Change Log
+# Changelog
 
-All notable changes to the "pic18-assembly-language" extension will be documented in this file.
+<!-- ## [Unreleased]
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Added
 
-## [Unreleased]
+- v1.1 Brazilian Portuguese translation.
+- v1.1 German Translation
+- v1.1 Spanish translation.
+- v1.1 Italian translation.
+- v1.1 Polish translation.
+- v1.1 Ukrainian translation.
 
-- Initial release
+### Changed
+
+- Use frontmatter title & description in each language version template
+- Replace broken OpenGraph image with an appropriately-sized Keep a Changelog 
+  image that will render properly (although in English for all languages)
+- Fix OpenGraph title & description for all languages so the title and 
+description when links are shared are language-appropriate
+
+### Removed
+
+- Trademark sign previously shown after the project description in version 
+0.3.0 -->
+
+## [0.1.3] - 2025-10-19
+
+### Added
+
+- Support for Macro auto-completion.
+- Support for cross-file Macro definitions and usages.
+- Support for Macro usage recognition in "Go to Definition" feature.
+- Support for Macro duplicated detection and show diagnostics.
+- Support for custom comments for Macro definitions.
+- Support for Macro highlighting in syntax highlighting feature.
+- Support for Macro parameters in Macro definitions.
+- Support for Macro parameter auto-completion.
+- Support for Macro parameter recognition in "Go to Definition" feature.
+- Support for Macro parameter duplicated detection and show diagnostics.
+- Support for Macro parameters highlighting in syntax highlighting feature.
+- Add mpasm assembler template snippets.
+- Add Macro definition code snippets.
+
+### Fixed
+
+- Can't trace the secondary parameters of instructions.
+- Can't recognize variables used as Macro parameters.
+
+### Changed
+
+- N/A
+
+### Removed
+
+- N/A
+
+## [0.1.2] - 2025-10-19
+
+### Added
+
+- The first release of PIC18 Assembly Language extension.
+
+### Fixed
+
+- N/A
+
+### Changed
+
+- N/A
+
+### Removed
+
+- N/A

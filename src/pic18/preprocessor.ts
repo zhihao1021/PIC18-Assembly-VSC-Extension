@@ -21,7 +21,7 @@ export const XC8_PREPROCESSOR: Xc8PreProcessor[] = [
 ]
 
 export const XC8_PREPROCESSOR_COMPLETIONS = XC8_PREPROCESSOR.map(({ label, detail }) => {
-    const ci = new CompletionItem(label, CompletionItemKind.Snippet);
+    const ci = new CompletionItem(label, CompletionItemKind.Keyword);
     ci.detail = detail;
     ci.insertText = `${label.slice(1)} `;
     return ci;

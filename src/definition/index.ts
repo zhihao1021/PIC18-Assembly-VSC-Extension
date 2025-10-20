@@ -10,6 +10,7 @@ import {
 } from "vscode";
 import { checkLabelDefinition } from "./label";
 import { checkVariableDefinition } from "./variable";
+import { checkMacroDefinition } from "./macro";
 
 const lastSpaceRegex = /(^|\s|,)[^\s,]*$/
 const nextSpaceRegex = /^([^\s,]+)(?:$|\s|,)/
@@ -22,7 +23,7 @@ export class CustomDefinitionProvider implements DefinitionProvider {
     ): ProviderResult<Location[]> {
         const lineText = document.lineAt(position).text;
         const spaceMatch = lineText.slice(0, position.character + 1).match(lastSpaceRegex);
-        if (!spaceMatch || !spaceMatch.index) {
+        if (!spaceMatch || spaceMatch.index === undefined) {
             return null;
         }
 
@@ -36,11 +37,19 @@ export class CustomDefinitionProvider implements DefinitionProvider {
         const locations: Location[] = [];
 
         checkLabelDefinition(word, lineText, startIndex, locations);
-        if (locations.length > 0) {
-            return locations;
-        }
+        if (locations.length > 0) return locations;
 
-        checkVariableDefinition(word, lineText, startIndex, document, locations);
+        checkMacroDefinition(word, lineText, startIndex, document, locations);
+        if (locations.length > 0) return locations;
+
+        checkVariableDefinition(
+            word,
+            lineText,
+            startIndex,
+            document,
+            position,
+            locations
+        );
 
         return locations.length ? locations : null;
     }

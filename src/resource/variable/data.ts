@@ -8,13 +8,13 @@ import { includeManager } from "../include/data";
 
 class DataManager {
     private _fileMapDefineData: Map<string, Map<string, VariableDefineResourceType>>;
-    private _fileMapUsageData: Map<string, VariableResourceType[]>;
+    private _fileMapUsageData: Map<string, Map<string, VariableResourceType[]>>;
 
     get fileMapDefineData(): Map<string, Map<string, VariableDefineResourceType>> {
         return this._fileMapDefineData;
     }
 
-    get fileMapUsageData(): Map<string, VariableResourceType[]> {
+    get fileMapUsageData(): Map<string, Map<string, VariableResourceType[]>> {
         return this._fileMapUsageData;
     }
 
@@ -53,7 +53,15 @@ class DataManager {
     public setUsageVariablesOfUri(uri: Uri, variables: VariableResourceType[]): void {
         const fileUri = getFileId(uri);
 
-        this._fileMapUsageData.set(fileUri, variables);
+        const variableMap = new Map<string, VariableResourceType[]>();
+        variables.forEach(v => {
+            const varList = variableMap.get(v.value.name);
+
+            if (varList) varList.push(v);
+            else variableMap.set(v.value.name, [v]);
+        });
+
+        this._fileMapUsageData.set(fileUri, variableMap);
         this.refreshUsageVariablesExistsOfUri(uri);
     }
 
@@ -66,8 +74,8 @@ class DataManager {
     public refreshUsageVariablesExistsOfUri(uri: Uri): void {
         const fileUri = getFileId(uri);
 
-        const variables = this._fileMapUsageData.get(fileUri);
-        if (!variables) return;
+        const variableMap = this._fileMapUsageData.get(fileUri);
+        if (!variableMap) return;
 
         const includedVariables: VariableDefineResourceType[] = [];
         includeManager.recursiveIncludeMapData.get(fileUri)?.forEach(includeUri => {
@@ -76,15 +84,15 @@ class DataManager {
             if (variables) includedVariables.push(...Array.from(variables.values()));
         });
 
-        variables.forEach(variable => {
+        variableMap.forEach(variables => variables.map(variable => {
             variable.value.exists = includedVariables.some(v => v.value.name === variable.value.name);
-        });
+        }));
     }
 
     public refreshAllUsageVariablesExists(): void {
-        this._fileMapUsageData.forEach((data) => {
-            if (data.length === 0) return;
-            this.refreshUsageVariablesExistsOfUri(data[0].uri);
+        this._fileMapUsageData.forEach((data, fileUri) => {
+            if (data.size === 0) return;
+            this.refreshUsageVariablesExistsOfUri(Uri.parse(fileUri));
         });
     }
 }

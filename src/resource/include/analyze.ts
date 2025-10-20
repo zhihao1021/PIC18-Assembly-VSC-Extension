@@ -25,6 +25,7 @@ export function analyzeIncludesOfDocument(document: TextDocument): void {
             }))
         })
     }));
+    includeManager.documentCache = document;
 }
 
 export function analyzeIncludesOfWorkspace(documents: TextDocument[]): void {

@@ -8,8 +8,8 @@ export const variableRegexGenerator = (name: string, flag: string = "gm") => new
 export function getVariableRanges(document: TextDocument): Range[] {
     const fileUri = getFileId(document.uri);
 
-    const usageDataRanges = Array.from(variableManager.fileMapUsageData.get(fileUri)?.values() ?? []).filter(
-        l => l.value.exists
+    const usageDataRanges = Array.from(variableManager.fileMapUsageData.get(fileUri)?.values() ?? []).flat().filter(
+        l => l.value.exists || l.value.macro
     ).map(l => l.range);
 
     return usageDataRanges;
