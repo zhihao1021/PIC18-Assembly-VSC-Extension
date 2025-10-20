@@ -18,25 +18,29 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18.x'
-          cache: 'npm'
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
   
       - name: Cache dependencies
         uses: actions/cache@v4
-        id: npm-cache
+        id: pnpm-cache
         with:
           path: |
-            ~/.npm
+            ~/.local/share/pnpm/store
             node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-npm-
+            ${{ runner.os }}-pnpm-
 
       - name: Install dependencies
-        run: npm ci
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: pnpm install --frozen-lockfile
   
       - name: Install vsce
-        run: npm install -g @vscode/vsce
+        run: pnpm install -g @vscode/vsce
 
       - name: Package with vsce
         run: vsce package --readme-path README.extension.md
