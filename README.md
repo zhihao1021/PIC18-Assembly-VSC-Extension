@@ -23,6 +23,14 @@ Provides basic PIC18 assembly language support for Visual Studio Code.
 
     **請確認發布者為 `ChuangChih-Hao` 或是頁面右側的識別碼為 `zhihao1021.pic18-assembly-language`**
 
+### 使用 .vsix 檔案安裝
+1. 前往 [Releases 頁面](https://github.com/zhihao1021/PIC18-Assembly-VSC-Extension/releases)
+2. 下載最新版本的 `.vsix` 檔案
+3. 開啟 Visual Studio Code
+4. 點選左側的 Extensions 圖示
+5. 點選右上角的三個點，選擇 "Install from VSIX..."
+6. 選擇剛剛下載的 `.vsix` 檔案
+
 <!-- ### 使用 VSIX 檔案安裝
 1. 前往 [Visual Studio Code 市集頁面](https://marketplace.visualstudio.com/items?itemName=zhihao1021.pic18-assembly-language)
 2. 點選 "Download Extension" 下載 VSIX 檔案
