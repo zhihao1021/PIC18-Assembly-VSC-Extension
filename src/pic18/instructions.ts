@@ -85,6 +85,8 @@ export const PIC_INSTRUCTIONS: PicInstruction[] = [
     { label: "TBLWT+*", detail: "Table Write with Pre-Increment" },
 ]
 
+export const instructionRegex = /(?<=^[ \t]*)((ADDWF|ADDWFC|ANDWF|CLRF|COMF|CPFSEQ|CPFSGT|CPFSLT|DECF|DECFSZ|DCFSNZ|INCF|INCFSZ|INFSNZ|IORWF|MOVF|MOVFF|MOVWF|MULWF|NEGF|RLCF|RLNCF|RRCF|RRNCF|SETF|SUBFWB|SUBWF|SUBWFB|SWAPF|TSTFSZ|XORWF|BCF|BSF|BTFSC|BTFSS|BTG|BC|BN|BNC|BNN|BNOV|BNZ|BOV|BRA|BZ|CALL|CLRWDT|DAW|GOTO|NOP|POP|PUSH|RCALL|RESET|RETFIE|RETLW|RETURN|SLEEP|ADDLW|ANDLW|IORLW|LFSR|MOVLB|MOVLW|MULLW|SUBLW|XORLW)\b|TBL(?:RD|WT)(?:\+\*|\*[+-]?)(?=$|[ \t]))/gmi;
+
 export const PIC_INSTRUCTIONS_COMPLETIONS = PIC_INSTRUCTIONS.map(({ label, detail }) => {
     const ci = new CompletionItem(label, CompletionItemKind.Enum);
     ci.detail = detail;

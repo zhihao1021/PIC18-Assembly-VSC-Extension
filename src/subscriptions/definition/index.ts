@@ -8,12 +8,12 @@ import {
     ProviderResult,
     TextDocument,
 } from "vscode";
+
+import { parseWordAtPosition } from "@/utils/parseWord";
+
 import { checkLabelDefinition } from "./label";
 import { checkVariableDefinition } from "./variable";
 import { checkMacroDefinition } from "./macro";
-
-const lastSpaceRegex = /(^|\s|,)[^\s,]*$/
-const nextSpaceRegex = /^([^\s,]+)(?:$|\s|,)/
 
 export class CustomDefinitionProvider implements DefinitionProvider {
     public provideDefinition(
@@ -22,18 +22,10 @@ export class CustomDefinitionProvider implements DefinitionProvider {
         token: CancellationToken
     ): ProviderResult<Location[]> {
         const lineText = document.lineAt(position).text;
-        const spaceMatch = lineText.slice(0, position.character + 1).match(lastSpaceRegex);
-        if (!spaceMatch || spaceMatch.index === undefined) {
-            return null;
-        }
+        const parseWord = parseWordAtPosition(lineText, position);
+        if (!parseWord) return null;
+        const { word, startIndex } = parseWord;
 
-        const startIndex = spaceMatch.index + spaceMatch[1].length;
-        const endMatch = lineText.slice(startIndex).match(nextSpaceRegex);
-        if (!endMatch) {
-            return null;
-        }
-
-        const word = endMatch[1];
         const locations: Location[] = [];
 
         checkLabelDefinition(word, lineText, startIndex, locations);

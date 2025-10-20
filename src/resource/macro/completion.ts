@@ -3,12 +3,14 @@ import { CompletionItem, CompletionItemKind, MarkdownString, TextDocument } from
 import { getFileId } from "@/utils/getFileId";
 
 import { macroManager } from "./data";
+import { macroToDocumentation } from "./documentation";
 
 export function getMacroCompletions(document: TextDocument): CompletionItem[] {
     const fileUri = getFileId(document.uri);
 
     const results: CompletionItem[] = [];
-    macroManager.fileIncludeMapMacroData.get(fileUri)?.forEach(({ position, value: { name, comment, rawParameters } }) => {
+    macroManager.fileIncludeMapMacroData.get(fileUri)?.forEach(macro => {
+        const { value: { name, rawParameters } } = macro;
         const item = new CompletionItem(name, CompletionItemKind.Class);
 
         item.insertText = name;
@@ -16,7 +18,7 @@ export function getMacroCompletions(document: TextDocument): CompletionItem[] {
             item.insertText += ` ${rawParameters.map(param => param.value.name).join(", ")}`;
         }
         item.detail = `(macro)`;
-        item.documentation = new MarkdownString(`Define in \`${fileUri}:${position.line}\`\n\n${comment || ""}`);
+        item.documentation = macroToDocumentation(macro);
 
         results.push(item);
     });

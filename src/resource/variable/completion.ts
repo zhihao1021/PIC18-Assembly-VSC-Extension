@@ -4,6 +4,7 @@ import { getFileId } from "@/utils/getFileId";
 import { variableManager } from "./data";
 import { includeManager } from "../include/data";
 import { macroManager } from "../macro/data";
+import { variableToDocumentation } from "./documentation";
 
 export function getVariableCompletions(document: TextDocument, position: Position): CompletionItem[] {
     const fileUri = getFileId(document.uri);
@@ -13,12 +14,14 @@ export function getVariableCompletions(document: TextDocument, position: Positio
 
     const includedVariables: CompletionItem[] = [];
     includeFiles.forEach(includeUri => {
-        variableManager.fileMapDefineData.get(includeUri)?.forEach(({ position, value: { value, comment, name } }) => {
+        variableManager.fileMapDefineData.get(includeUri)?.forEach(variable => {
+            const { value: { name, value } } = variable;
+
             const item = new CompletionItem(name, CompletionItemKind.Variable);
 
             item.insertText = name;
             item.detail = `(variable) ${value}`;
-            item.documentation = new MarkdownString(`Define in \`${includeUri}:${position.line}\`\n\n${comment || ""}`);
+            item.documentation = variableToDocumentation(variable);
 
             includedVariables.push(item);
         });
@@ -26,17 +29,18 @@ export function getVariableCompletions(document: TextDocument, position: Positio
 
     const macros = macroManager.fileMapMacroData.get(fileUri);
     if (macros) {
-        macros.forEach(({ range, value: { name: macroName, parameters } }) => {
+        macros.forEach(macro => {
+            const { range, value: { name: macroName, parameters } } = macro;
             if (!range.contains(position)) return;
 
-            [...parameters.values()].flat().forEach(({
-                position, value: { name }
-            }) => {
+            [...parameters.values()].flat().forEach(variable => {
+                const { value: { name } } = variable;
+
                 const item = new CompletionItem(name, CompletionItemKind.Variable);
 
                 item.insertText = name;
                 item.detail = `(macro parameter) of \`${macroName}\``;
-                item.documentation = new MarkdownString(`Define in macro \`${macroName}\` at \`${fileUri}:${position.line},${position.character}\``);
+                item.documentation = variableToDocumentation(variable, macro);
 
                 includedVariables.push(item);
             });

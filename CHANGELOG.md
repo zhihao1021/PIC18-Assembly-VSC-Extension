@@ -24,6 +24,27 @@ description when links are shared are language-appropriate
 - Trademark sign previously shown after the project description in version 
 0.3.0 -->
 
+## [0.1.6] - 2025-10-20
+
+### Added
+
+- Hover documentation for instruction.
+- Hover documentation for label.
+- Hover documentation for variable.
+- Hover documentation for macro.
+
+### Fixed
+
+- Fix variable still exists after removing all variable definitions in a file.
+
+### Changed
+
+- N/A
+
+### Removed
+
+- N/A
+
 ## [0.1.5] - 2025-10-20
 
 ### Added
@@ -64,24 +85,24 @@ description when links are shared are language-appropriate
 
 ### Added
 
-- Support for Macro auto-completion.
-- Support for cross-file Macro definitions and usages.
-- Support for Macro usage recognition in "Go to Definition" feature.
-- Support for Macro duplicated detection and show diagnostics.
-- Support for custom comments for Macro definitions.
-- Support for Macro highlighting in syntax highlighting feature.
-- Support for Macro parameters in Macro definitions.
-- Support for Macro parameter auto-completion.
-- Support for Macro parameter recognition in "Go to Definition" feature.
-- Support for Macro parameter duplicated detection and show diagnostics.
-- Support for Macro parameters highlighting in syntax highlighting feature.
+- Support for macro auto-completion.
+- Support for cross-file macro definitions and usages.
+- Support for macro usage recognition in "Go to Definition" feature.
+- Support for macro duplicated detection and show diagnostics.
+- Support for custom comments for macro definitions.
+- Support for macro highlighting in syntax highlighting feature.
+- Support for macro parameters in macro definitions.
+- Support for macro parameter auto-completion.
+- Support for macro parameter recognition in "Go to Definition" feature.
+- Support for macro parameter duplicated detection and show diagnostics.
+- Support for macro parameters highlighting in syntax highlighting feature.
 - Add mpasm assembler template snippets.
-- Add Macro definition code snippets.
+- Add macro definition code snippets.
 
 ### Fixed
 
 - Can't trace the secondary parameters of instructions.
-- Can't recognize variables used as Macro parameters.
+- Can't recognize variables used as macro parameters.
 
 ### Changed
 

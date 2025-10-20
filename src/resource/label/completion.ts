@@ -4,6 +4,7 @@ import { getFileId } from "@/utils/getFileId";
 
 import { labelManager } from "./data";
 import { LabelResourceType } from "./types/label";
+import { labelToDocumentation } from "./documentation";
 
 let cachedResults: CompletionItem[] = [];
 let lastDocumentUri: string = "";
@@ -33,8 +34,7 @@ function labelToCompletionItem(
 
     const item = new CompletionItem(labelName, CompletionItemKind.Function);
     item.insertText = labelName;
-    item.documentation = new MarkdownString(label.value.comment);
-    item.documentation = new MarkdownString(`Define in \`${fileUri}:${position.line}\`\n\n${comment || ""}`);
+    item.documentation = labelToDocumentation(label);
 
     switch (type) {
         case "currentFile":
