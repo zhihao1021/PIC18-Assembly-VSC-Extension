@@ -24,6 +24,25 @@ description when links are shared are language-appropriate
 - Trademark sign previously shown after the project description in version 
 0.3.0 -->
 
+## [0.1.7] - 2025-10-21
+
+### Added
+
+- Auto exclude files in `.gitignore` from language features.
+
+### Fixed
+
+- Hightlighting issue when use EQU with lowercase label.
+- Hightlighting issue when use macro with prefix space before macro name.
+
+### Changed
+
+- Add `.history` to the excluded files in the extension.
+
+### Removed
+
+- N/A
+
 ## [0.1.6] - 2025-10-20
 
 ### Added

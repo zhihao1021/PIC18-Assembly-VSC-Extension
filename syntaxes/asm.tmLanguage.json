@@ -122,7 +122,7 @@
 				},
 				{
 					"name": "constant.numeric.hexadecimal",
-					"match": "\\b0([\\da-fA-F]+(H|h)|(x|X)[\\da-fA-F]+)\\b"
+					"match": "\\b0([\\da-fA-F]+[Hh]|[xX][\\da-fA-F]+)\\b"
 				}
 			]
 		},
@@ -223,7 +223,7 @@
 			}
 		},
 		"equ": {
-			"match": "^[ \\t]*([A-Za-z_\\?][\\dA-Za-z_\\?\\$]*)[ \\t]+(?=EQU)",
+			"match": "^[ \\t]*([A-Za-z_\\?][\\dA-Za-z_\\?\\$]*)[ \\t]+(?=[Ee][Qq][Uu])",
 			"name": "variable.name"
 		},
 		"registerOrWreg": {
@@ -241,7 +241,7 @@
 		"macro": {
 			"patterns": [
 				{
-					"match": "^(?<=[ \\t]*)(\\S+)(?=[ \\t]+[Mm][Aa][Cc][Rr][Oo])",
+					"match": "(?<=^[ \\t]*)(\\S+)(?=[ \\t]+[Mm][Aa][Cc][Rr][Oo])",
 					"name": "entity.name.class.macro"
 				},
 				{
