@@ -2,7 +2,7 @@
   "name": "pic18-assembly-language",
   "displayName": "PIC18 Assembly Language",
   "description": "Language support for PIC18 assembly",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -28,6 +28,7 @@
     "syntaxes/**",
     "language-configuration.json",
     "README.extension.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "scripts": {
