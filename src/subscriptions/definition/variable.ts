@@ -4,6 +4,7 @@ import { includeManager } from "@/resource/include/data";
 import { variableManager } from "@/resource/variable/data";
 import { usageVariableRegex } from "@/resource/variable/usageVariableRegex";
 import { getFileId } from "@/utils/getFileId";
+import { labelManager } from "@/resource/label/data";
 
 const variableRegex = new RegExp(usageVariableRegex.source, "gi");
 
@@ -25,7 +26,16 @@ export function checkVariableDefinition(
     const variableData = variableManager.fileMapUsageData.get(fileUri)?.get(word)?.find(d => {
         return (d.value.exists || d.value.macro) && d.range.contains(position);
     });
-    if (!variableData) return;
+    if (!variableData) {
+        const labelData = labelManager.labelNameMapData.get(word);
+        if (labelData) {
+            locations.push(...labelData.map(({ uri, position }) => new Location(
+                uri,
+                position
+            )));
+        }
+        return;
+    }
 
     const macroData = variableData?.value.macro;
     if (macroData) {
@@ -34,7 +44,7 @@ export function checkVariableDefinition(
                 d.uri,
                 d.position
             ));
-        })
+        });
         return;
     }
 

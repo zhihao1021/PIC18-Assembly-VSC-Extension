@@ -47,6 +47,7 @@ async function provideCompletionItems(
 
     return [
         ...getVariableCompletions(document, position),
+        ...getLabelCompletions(document, false),
         ...PIC_DEFINE_COMPLETIONS_WITH_SORT_TEXT
     ];
 }

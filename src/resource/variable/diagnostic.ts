@@ -1,6 +1,7 @@
 import { getFileId } from "@/utils/getFileId";
 import { Diagnostic, DiagnosticCollection, DiagnosticSeverity, languages, Uri } from "vscode";
 import { variableManager } from "./data";
+import { labelManager } from "../label/data";
 
 const variableCollections: DiagnosticCollection = languages.createDiagnosticCollection("pic18-asm-variables");
 
@@ -22,6 +23,8 @@ export function updateVariableDiagnostics(): void {
 
     variableManager.fileMapUsageData.forEach(variables => Array.from(variables.values()).flat().forEach(({ uri, range, value: { name, exists, macro } }) => {
         if (exists || macro) return;
+
+        if (labelManager.labelNameMapData.has(name)) return;
 
         pushDiagnostic(uri, new Diagnostic(
             range, `Undefined variable '${name}'`,

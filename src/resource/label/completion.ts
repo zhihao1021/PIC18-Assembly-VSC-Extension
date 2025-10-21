@@ -54,7 +54,7 @@ function labelToCompletionItem(
     return item;
 }
 
-export function getLabelCompletions(document: TextDocument): CompletionItem[] {
+export function getLabelCompletions(document: TextDocument, withAutoExternal: boolean = true): CompletionItem[] {
     const fileUri = getFileId(document.uri);
     if (lastDocumentUri === fileUri) return cachedResults;
 
@@ -76,6 +76,9 @@ export function getLabelCompletions(document: TextDocument): CompletionItem[] {
             if (importedLabels.includes(labelName)) return labelToCompletionItem(resource, "imported");
 
             const item = labelToCompletionItem(resource, "external");
+
+            if (!withAutoExternal) return item;
+
             let insertLine = 0;
             for (const [directive, indexType] of INSERT_ORDER) {
                 if (!documentText.includes(directive)) continue;

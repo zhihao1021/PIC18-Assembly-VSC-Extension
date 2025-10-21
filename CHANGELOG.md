@@ -24,6 +24,24 @@ description when links are shared are language-appropriate
 - Trademark sign previously shown after the project description in version 
 0.3.0 -->
 
+## [0.1.9] - 2025-10-21
+
+### Added
+
+- N/A
+
+### Fixed
+
+- Can use labels as variable names.
+
+### Changed
+
+- N/A
+
+### Removed
+
+- N/A
+
 ## [0.1.8] - 2025-10-21
 
 ### Added
