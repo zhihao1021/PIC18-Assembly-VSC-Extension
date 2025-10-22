@@ -6,7 +6,7 @@ import mpasmDefine from "./define/mpasm.json";
 import xc8Define from "./define/xc8.json";
 
 export const PIC_DEFINE_COMPLETIONS = [
-    ...Object.entries(sameDefine).map(([label, value]) => {
+    ...Object.entries(sameDefine).map(([label, { value, description }]) => {
         const ci = new CompletionItem(label, CompletionItemKind.Constant);
         ci.detail = value;
         ci.insertText = label;

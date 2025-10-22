@@ -24,6 +24,24 @@ description when links are shared are language-appropriate
 - Trademark sign previously shown after the project description in version 
 0.3.0 -->
 
+## [0.1.10] - 2025-10-22
+
+### Added
+
+- AI-translated instruction details in Traditional Chinese.
+
+### Fixed
+
+- N/A
+
+### Changed
+
+- N/A
+
+### Removed
+
+- N/A
+
 ## [0.1.9] - 2025-10-21
 
 ### Added

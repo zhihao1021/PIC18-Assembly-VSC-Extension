@@ -1,3 +1,4 @@
+import { INSTRUCTION_DETAILS_MAP_TC } from "./instruction_detail.zh_tc";
 import { InstructionKey } from "./type";
 
 
@@ -2808,5 +2809,5 @@ W = B5h`
 ];
 
 export const INSTRUCTION_DETAILS_MAP: Map<InstructionKey, string> = new Map(INSTRUCTION_DETAILS.map(
-    detail => [detail.name, detail.content]
+    detail => [detail.name, `${detail.content}\n\n${INSTRUCTION_DETAILS_MAP_TC.get(detail.name) ?? ""}`]
 ));

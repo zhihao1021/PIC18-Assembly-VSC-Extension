@@ -1,128 +1,506 @@
 {
-  "w": "0",
-  "f": "1",
-  "b": "1",
-  "c": "0",
-  "a": "0",
-  "PORTA": "0F80h",
-  "PORTB": "0F81h",
-  "PORTC": "0F82h",
-  "PORTD": "0F83h",
-  "PORTE": "0F84h",
-  "LATA": "0F89h",
-  "LATB": "0F8Ah",
-  "LATC": "0F8Bh",
-  "LATD": "0F8Ch",
-  "LATE": "0F8Dh",
-  "TRISA": "0F92h",
-  "TRISB": "0F93h",
-  "TRISC": "0F94h",
-  "TRISD": "0F95h",
-  "TRISE": "0F96h",
-  "OSCTUNE": "0F9Bh",
-  "PIE1": "0F9Dh",
-  "PIR1": "0F9Eh",
-  "IPR1": "0F9Fh",
-  "PIE2": "0FA0h",
-  "PIR2": "0FA1h",
-  "IPR2": "0FA2h",
-  "EECON1": "0FA6h",
-  "EECON2": "0FA7h",
-  "EEDATA": "0FA8h",
-  "EEADR": "0FA9h",
-  "RCSTA": "0FABh",
-  "TXSTA": "0FACh",
-  "TXREG": "0FADh",
-  "RCREG": "0FAEh",
-  "SPBRG": "0FAFh",
-  "SPBRGH": "0FB0h",
-  "T3CON": "0FB1h",
-  "TMR3": "0FB2h",
-  "TMR3L": "0FB2h",
-  "TMR3H": "0FB3h",
-  "CMCON": "0FB4h",
-  "CVRCON": "0FB5h",
-  "ECCP1AS": "0FB6h",
-  "PWM1CON": "0FB7h",
-  "BAUDCON": "0FB8h",
-  "CCP2CON": "0FBAh",
-  "CCPR2": "0FBBh",
-  "CCPR2L": "0FBBh",
-  "CCPR2H": "0FBCh",
-  "CCP1CON": "0FBDh",
-  "CCPR1": "0FBEh",
-  "CCPR1L": "0FBEh",
-  "CCPR1H": "0FBFh",
-  "ADCON2": "0FC0h",
-  "ADCON1": "0FC1h",
-  "ADCON0": "0FC2h",
-  "ADRES": "0FC3h",
-  "ADRESL": "0FC3h",
-  "ADRESH": "0FC4h",
-  "SSPCON2": "0FC5h",
-  "SSPCON1": "0FC6h",
-  "SSPSTAT": "0FC7h",
-  "SSPADD": "0FC8h",
-  "SSPBUF": "0FC9h",
-  "T2CON": "0FCAh",
-  "PR2": "0FCBh",
-  "TMR2": "0FCCh",
-  "T1CON": "0FCDh",
-  "TMR1": "0FCEh",
-  "TMR1L": "0FCEh",
-  "TMR1H": "0FCFh",
-  "RCON": "0FD0h",
-  "WDTCON": "0FD1h",
-  "HLVDCON": "0FD2h",
-  "OSCCON": "0FD3h",
-  "T0CON": "0FD5h",
-  "TMR0": "0FD6h",
-  "TMR0L": "0FD6h",
-  "TMR0H": "0FD7h",
-  "STATUS": "0FD8h",
-  "FSR2": "0FD9h",
-  "FSR2L": "0FD9h",
-  "FSR2H": "0FDAh",
-  "PLUSW2": "0FDBh",
-  "PREINC2": "0FDCh",
-  "POSTDEC2": "0FDDh",
-  "POSTINC2": "0FDEh",
-  "INDF2": "0FDFh",
-  "BSR": "0FE0h",
-  "FSR1": "0FE1h",
-  "FSR1L": "0FE1h",
-  "FSR1H": "0FE2h",
-  "PLUSW1": "0FE3h",
-  "PREINC1": "0FE4h",
-  "POSTDEC1": "0FE5h",
-  "POSTINC1": "0FE6h",
-  "INDF1": "0FE7h",
-  "WREG": "0FE8h",
-  "FSR0": "0FE9h",
-  "FSR0L": "0FE9h",
-  "FSR0H": "0FEAh",
-  "PLUSW0": "0FEBh",
-  "PREINC0": "0FECh",
-  "POSTDEC0": "0FEDh",
-  "POSTINC0": "0FEEh",
-  "INDF0": "0FEFh",
-  "INTCON3": "0FF0h",
-  "INTCON2": "0FF1h",
-  "INTCON": "0FF2h",
-  "PROD": "0FF3h",
-  "PRODL": "0FF3h",
-  "PRODH": "0FF4h",
-  "TABLAT": "0FF5h",
-  "TBLPTR": "0FF6h",
-  "TBLPTRL": "0FF6h",
-  "TBLPTRH": "0FF7h",
-  "TBLPTRU": "0FF8h",
-  "PCL": "0FF9h",
-  "PCLATH": "0FFAh",
-  "PCLATU": "0FFBh",
-  "STKPTR": "0FFCh",
-  "TOS": "0FFDh",
-  "TOSL": "0FFDh",
-  "TOSH": "0FFEh",
-  "TOSU": "0FFFh"
+  "w": {
+    "value": "0",
+    "description": ""
+  },
+  "f": {
+    "value": "1",
+    "description": ""
+  },
+  "b": {
+    "value": "1",
+    "description": ""
+  },
+  "c": {
+    "value": "0",
+    "description": ""
+  },
+  "a": {
+    "value": "0",
+    "description": ""
+  },
+  "PORTA": {
+    "value": "0F80h",
+    "description": ""
+  },
+  "PORTB": {
+    "value": "0F81h",
+    "description": ""
+  },
+  "PORTC": {
+    "value": "0F82h",
+    "description": ""
+  },
+  "PORTD": {
+    "value": "0F83h",
+    "description": ""
+  },
+  "PORTE": {
+    "value": "0F84h",
+    "description": ""
+  },
+  "LATA": {
+    "value": "0F89h",
+    "description": ""
+  },
+  "LATB": {
+    "value": "0F8Ah",
+    "description": ""
+  },
+  "LATC": {
+    "value": "0F8Bh",
+    "description": ""
+  },
+  "LATD": {
+    "value": "0F8Ch",
+    "description": ""
+  },
+  "LATE": {
+    "value": "0F8Dh",
+    "description": ""
+  },
+  "TRISA": {
+    "value": "0F92h",
+    "description": ""
+  },
+  "TRISB": {
+    "value": "0F93h",
+    "description": ""
+  },
+  "TRISC": {
+    "value": "0F94h",
+    "description": ""
+  },
+  "TRISD": {
+    "value": "0F95h",
+    "description": ""
+  },
+  "TRISE": {
+    "value": "0F96h",
+    "description": ""
+  },
+  "OSCTUNE": {
+    "value": "0F9Bh",
+    "description": ""
+  },
+  "PIE1": {
+    "value": "0F9Dh",
+    "description": ""
+  },
+  "PIR1": {
+    "value": "0F9Eh",
+    "description": ""
+  },
+  "IPR1": {
+    "value": "0F9Fh",
+    "description": ""
+  },
+  "PIE2": {
+    "value": "0FA0h",
+    "description": ""
+  },
+  "PIR2": {
+    "value": "0FA1h",
+    "description": ""
+  },
+  "IPR2": {
+    "value": "0FA2h",
+    "description": ""
+  },
+  "EECON1": {
+    "value": "0FA6h",
+    "description": ""
+  },
+  "EECON2": {
+    "value": "0FA7h",
+    "description": ""
+  },
+  "EEDATA": {
+    "value": "0FA8h",
+    "description": ""
+  },
+  "EEADR": {
+    "value": "0FA9h",
+    "description": ""
+  },
+  "RCSTA": {
+    "value": "0FABh",
+    "description": ""
+  },
+  "TXSTA": {
+    "value": "0FACh",
+    "description": ""
+  },
+  "TXREG": {
+    "value": "0FADh",
+    "description": ""
+  },
+  "RCREG": {
+    "value": "0FAEh",
+    "description": ""
+  },
+  "SPBRG": {
+    "value": "0FAFh",
+    "description": ""
+  },
+  "SPBRGH": {
+    "value": "0FB0h",
+    "description": ""
+  },
+  "T3CON": {
+    "value": "0FB1h",
+    "description": ""
+  },
+  "TMR3": {
+    "value": "0FB2h",
+    "description": ""
+  },
+  "TMR3L": {
+    "value": "0FB2h",
+    "description": ""
+  },
+  "TMR3H": {
+    "value": "0FB3h",
+    "description": ""
+  },
+  "CMCON": {
+    "value": "0FB4h",
+    "description": ""
+  },
+  "CVRCON": {
+    "value": "0FB5h",
+    "description": ""
+  },
+  "ECCP1AS": {
+    "value": "0FB6h",
+    "description": ""
+  },
+  "PWM1CON": {
+    "value": "0FB7h",
+    "description": ""
+  },
+  "BAUDCON": {
+    "value": "0FB8h",
+    "description": ""
+  },
+  "CCP2CON": {
+    "value": "0FBAh",
+    "description": ""
+  },
+  "CCPR2": {
+    "value": "0FBBh",
+    "description": ""
+  },
+  "CCPR2L": {
+    "value": "0FBBh",
+    "description": ""
+  },
+  "CCPR2H": {
+    "value": "0FBCh",
+    "description": ""
+  },
+  "CCP1CON": {
+    "value": "0FBDh",
+    "description": ""
+  },
+  "CCPR1": {
+    "value": "0FBEh",
+    "description": ""
+  },
+  "CCPR1L": {
+    "value": "0FBEh",
+    "description": ""
+  },
+  "CCPR1H": {
+    "value": "0FBFh",
+    "description": ""
+  },
+  "ADCON2": {
+    "value": "0FC0h",
+    "description": ""
+  },
+  "ADCON1": {
+    "value": "0FC1h",
+    "description": ""
+  },
+  "ADCON0": {
+    "value": "0FC2h",
+    "description": ""
+  },
+  "ADRES": {
+    "value": "0FC3h",
+    "description": ""
+  },
+  "ADRESL": {
+    "value": "0FC3h",
+    "description": ""
+  },
+  "ADRESH": {
+    "value": "0FC4h",
+    "description": ""
+  },
+  "SSPCON2": {
+    "value": "0FC5h",
+    "description": ""
+  },
+  "SSPCON1": {
+    "value": "0FC6h",
+    "description": ""
+  },
+  "SSPSTAT": {
+    "value": "0FC7h",
+    "description": ""
+  },
+  "SSPADD": {
+    "value": "0FC8h",
+    "description": ""
+  },
+  "SSPBUF": {
+    "value": "0FC9h",
+    "description": ""
+  },
+  "T2CON": {
+    "value": "0FCAh",
+    "description": ""
+  },
+  "PR2": {
+    "value": "0FCBh",
+    "description": ""
+  },
+  "TMR2": {
+    "value": "0FCCh",
+    "description": ""
+  },
+  "T1CON": {
+    "value": "0FCDh",
+    "description": ""
+  },
+  "TMR1": {
+    "value": "0FCEh",
+    "description": ""
+  },
+  "TMR1L": {
+    "value": "0FCEh",
+    "description": ""
+  },
+  "TMR1H": {
+    "value": "0FCFh",
+    "description": ""
+  },
+  "RCON": {
+    "value": "0FD0h",
+    "description": ""
+  },
+  "WDTCON": {
+    "value": "0FD1h",
+    "description": ""
+  },
+  "HLVDCON": {
+    "value": "0FD2h",
+    "description": ""
+  },
+  "OSCCON": {
+    "value": "0FD3h",
+    "description": ""
+  },
+  "T0CON": {
+    "value": "0FD5h",
+    "description": ""
+  },
+  "TMR0": {
+    "value": "0FD6h",
+    "description": ""
+  },
+  "TMR0L": {
+    "value": "0FD6h",
+    "description": ""
+  },
+  "TMR0H": {
+    "value": "0FD7h",
+    "description": ""
+  },
+  "STATUS": {
+    "value": "0FD8h",
+    "description": ""
+  },
+  "FSR2": {
+    "value": "0FD9h",
+    "description": ""
+  },
+  "FSR2L": {
+    "value": "0FD9h",
+    "description": ""
+  },
+  "FSR2H": {
+    "value": "0FDAh",
+    "description": ""
+  },
+  "PLUSW2": {
+    "value": "0FDBh",
+    "description": ""
+  },
+  "PREINC2": {
+    "value": "0FDCh",
+    "description": ""
+  },
+  "POSTDEC2": {
+    "value": "0FDDh",
+    "description": ""
+  },
+  "POSTINC2": {
+    "value": "0FDEh",
+    "description": ""
+  },
+  "INDF2": {
+    "value": "0FDFh",
+    "description": ""
+  },
+  "BSR": {
+    "value": "0FE0h",
+    "description": ""
+  },
+  "FSR1": {
+    "value": "0FE1h",
+    "description": ""
+  },
+  "FSR1L": {
+    "value": "0FE1h",
+    "description": ""
+  },
+  "FSR1H": {
+    "value": "0FE2h",
+    "description": ""
+  },
+  "PLUSW1": {
+    "value": "0FE3h",
+    "description": ""
+  },
+  "PREINC1": {
+    "value": "0FE4h",
+    "description": ""
+  },
+  "POSTDEC1": {
+    "value": "0FE5h",
+    "description": ""
+  },
+  "POSTINC1": {
+    "value": "0FE6h",
+    "description": ""
+  },
+  "INDF1": {
+    "value": "0FE7h",
+    "description": ""
+  },
+  "WREG": {
+    "value": "0FE8h",
+    "description": ""
+  },
+  "FSR0": {
+    "value": "0FE9h",
+    "description": ""
+  },
+  "FSR0L": {
+    "value": "0FE9h",
+    "description": ""
+  },
+  "FSR0H": {
+    "value": "0FEAh",
+    "description": ""
+  },
+  "PLUSW0": {
+    "value": "0FEBh",
+    "description": ""
+  },
+  "PREINC0": {
+    "value": "0FECh",
+    "description": ""
+  },
+  "POSTDEC0": {
+    "value": "0FEDh",
+    "description": ""
+  },
+  "POSTINC0": {
+    "value": "0FEEh",
+    "description": ""
+  },
+  "INDF0": {
+    "value": "0FEFh",
+    "description": ""
+  },
+  "INTCON3": {
+    "value": "0FF0h",
+    "description": ""
+  },
+  "INTCON2": {
+    "value": "0FF1h",
+    "description": ""
+  },
+  "INTCON": {
+    "value": "0FF2h",
+    "description": ""
+  },
+  "PROD": {
+    "value": "0FF3h",
+    "description": ""
+  },
+  "PRODL": {
+    "value": "0FF3h",
+    "description": ""
+  },
+  "PRODH": {
+    "value": "0FF4h",
+    "description": ""
+  },
+  "TABLAT": {
+    "value": "0FF5h",
+    "description": ""
+  },
+  "TBLPTR": {
+    "value": "0FF6h",
+    "description": ""
+  },
+  "TBLPTRL": {
+    "value": "0FF6h",
+    "description": ""
+  },
+  "TBLPTRH": {
+    "value": "0FF7h",
+    "description": ""
+  },
+  "TBLPTRU": {
+    "value": "0FF8h",
+    "description": ""
+  },
+  "PCL": {
+    "value": "0FF9h",
+    "description": ""
+  },
+  "PCLATH": {
+    "value": "0FFAh",
+    "description": ""
+  },
+  "PCLATU": {
+    "value": "0FFBh",
+    "description": ""
+  },
+  "STKPTR": {
+    "value": "0FFCh",
+    "description": ""
+  },
+  "TOS": {
+    "value": "0FFDh",
+    "description": ""
+  },
+  "TOSL": {
+    "value": "0FFDh",
+    "description": ""
+  },
+  "TOSH": {
+    "value": "0FFEh",
+    "description": ""
+  },
+  "TOSU": {
+    "value": "0FFFh",
+    "description": ""
+  }
 }
